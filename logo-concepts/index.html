@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafePick logo concepts</title>
+  <link rel="icon" type="image/png" href="../assets/img/icon-32.png">
+  <style>
+    :root {
+      --paper: #F5F8F6; --surface: #FFFFFF; --ink: #14201A; --ink-2: #4B5E56; --line: #D3DDD7; --accent: #245B4A; --night: #0E1713;
+      --f: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #0D1512; --surface: #16231D; --ink: #E4EEE8; --ink-2: #A2B6AC; --line: #26372F; --accent: #8FD3B0; color-scheme: dark; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f); line-height: 1.55; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 40px max(16px, env(safe-area-inset-right, 0px)) 64px max(16px, env(safe-area-inset-left, 0px)); }
+    header { display: grid; gap: 10px; margin-bottom: 32px; max-width: 48rem; }
+    .eyebrow { margin: 0; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    h1 { margin: 0; font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); line-height: 1.05; letter-spacing: -.02em; }
+    header p { margin: 0; color: var(--ink-2); font-size: 1.0625rem; }
+    a { color: var(--accent); }
+    .home { border-radius: 24px; padding: 26px 20px; margin-bottom: 36px; background: linear-gradient(135deg, #2C4A6B, #6B4A7A 55%, #C47A5A); color: #fff; }
+    .home h2 { margin: 0 0 18px 4px; font-size: .9375rem; font-weight: 600; opacity: .92; }
+    .home-row { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 18px 8px; justify-items: center; }
+    .home-app { display: grid; justify-items: center; gap: 6px; font-size: .6875rem; text-align: center; line-height: 1.25; text-shadow: 0 1px 2px rgba(0,0,0,.35); }
+    .home-app img { width: 60px; height: 60px; border-radius: 13.4px; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .concepts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .concept { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 22px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+    .top { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 20px; align-items: start; }
+    .big { width: 168px; height: 168px; border-radius: 22.37%; display: block; box-shadow: 0 10px 26px -14px rgba(0,0,0,.4); }
+    .info { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; min-width: 0; }
+    .info h2 { margin: 0; font-size: 1.375rem; letter-spacing: -.01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .num { color: var(--ink-2); font-weight: 600; }
+    .new { font-size: .6875rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; }
+    .idea { margin: 0; color: var(--ink-2); font-size: .9375rem; }
+    .sizes { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; }
+    .sizes figure { margin: 0; display: grid; justify-items: center; gap: 3px; font-size: .6875rem; color: var(--ink-2); }
+    .sizes img { display: block; }
+    .s60 { width: 60px; height: 60px; border-radius: 13.4px; }
+    .s40 { width: 40px; height: 40px; border-radius: 9px; }
+    .s29 { width: 29px; height: 29px; border-radius: 6.5px; }
+    .s16 { width: 16px; height: 16px; border-radius: 3.5px; }
+    .lockups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .lockups div { border-radius: 14px; padding: 14px; display: flex; align-items: center; min-height: 78px; border: 1px solid var(--line); min-width: 0; }
+    .lockups .light { background: #FFFFFF; }
+    .lockups .dark { background: var(--night); border-color: var(--night); }
+    .lockups img { height: 44px; max-width: 100%; }
+    .files { margin: 0; font-size: .8125rem; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 2px 12px; }
+    .files a { white-space: nowrap; }
+    .current { display: flex; gap: 14px; align-items: center; margin-top: 32px; color: var(--ink-2); font-size: .9375rem; }
+    .current img { width: 60px; height: 60px; border-radius: 13.4px; }
+    @media (max-width: 1100px) { .concepts { grid-template-columns: minmax(0, 1fr); } .home-row { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .top { grid-template-columns: minmax(0, 1fr); }
+      .lockups { grid-template-columns: minmax(0, 1fr); }
+      .home-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .home-app img { width: 54px; height: 54px; border-radius: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">SafePick · Logo concepts · Oct 2026</p>
+    <h1>Twenty directions for a new SafePick logo</h1>
+    <p>Each concept has an app icon and the SafePick name set beside it. The files are vector (SVG), so they stay sharp at any size, and the letters are outlined, so no font needs installing. Pick one, or mix ideas, and it can go into the app, the website and the store listings.</p>
+  </header>
+  <section class="home" aria-label="All twenty on a phone home screen">
+    <h2>On a home screen, at real size</h2>
+    <div class="home-row"><div class="home-app"><img src="1-verdict-ring/icon.svg" alt=""><span>1 · Verdict Ring</span></div><div class="home-app"><img src="2-scan-frame/icon.svg" alt=""><span>2 · Scan Frame</span></div><div class="home-app"><img src="3-leaf-check/icon.svg" alt=""><span>3 · Leaf Check</span></div><div class="home-app"><img src="4-seedling-code/icon.svg" alt=""><span>4 · Seedling Code</span></div><div class="home-app"><img src="5-pick-tag/icon.svg" alt=""><span>5 · Pick Tag</span></div><div class="home-app"><img src="6-leaf-shield/icon.svg" alt=""><span>6 · Leaf Shield</span></div><div class="home-app"><img src="7-basket-pick/icon.svg" alt=""><span>7 · Basket Pick</span></div><div class="home-app"><img src="8-sp-monogram/icon.svg" alt=""><span>8 · SP Monogram</span></div><div class="home-app"><img src="9-inspect-lens/icon.svg" alt=""><span>9 · Inspect Lens</span></div><div class="home-app"><img src="10-trust-seal/icon.svg" alt=""><span>10 · Trust Seal</span></div><div class="home-app"><img src="11-compare-cards/icon.svg" alt=""><span>11 · Compare Cards</span></div><div class="home-app"><img src="12-open-box/icon.svg" alt=""><span>12 · Open Box</span></div><div class="home-app"><img src="13-facts-label/icon.svg" alt=""><span>13 · Facts Label</span></div><div class="home-app"><img src="14-food-and-beauty/icon.svg" alt=""><span>14 · Food &amp; Beauty</span></div><div class="home-app"><img src="15-duo-check/icon.svg" alt=""><span>15 · Duo Check</span></div><div class="home-app"><img src="16-cherry-pick/icon.svg" alt=""><span>16 · Cherry Pick</span></div><div class="home-app"><img src="17-pixel-s/icon.svg" alt=""><span>17 · Pixel S</span></div><div class="home-app"><img src="18-p-leaf/icon.svg" alt=""><span>18 · P Leaf</span></div><div class="home-app"><img src="19-leaf-s/icon.svg" alt=""><span>19 · Leaf S</span></div><div class="home-app"><img src="20-shelf-pick/icon.svg" alt=""><span>20 · Shelf Pick</span></div></div>
+  </section>
+  <div class="concepts">
+<article class="concept" id="c1">
+  <div class="top"><img class="big" src="1-verdict-ring/icon.svg" alt="Verdict Ring app icon">
+    <div class="info"><h2><span class="num">1</span>Verdict Ring</h2><p class="idea">The app&#x27;s own score ring, from Avoid (red) through Okay (amber) to Good (green), around a check mark. It says &quot;this app scores products&quot; at a glance, and the dark background feels premium.</p>
+      <div class="sizes"><figure><img class="s60" src="1-verdict-ring/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="1-verdict-ring/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="1-verdict-ring/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="1-verdict-ring/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="1-verdict-ring/lockup.svg" alt="Verdict Ring logo on a light background"></div>
+    <div class="dark"><img src="1-verdict-ring/lockup-dark.svg" alt="Verdict Ring logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="1-verdict-ring/icon.svg">icon.svg</a><a href="1-verdict-ring/icon-1024.png">icon-1024.png</a><a href="1-verdict-ring/lockup.svg">lockup.svg</a><a href="1-verdict-ring/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c2">
+  <div class="top"><img class="big" src="2-scan-frame/icon.svg" alt="Scan Frame app icon">
+    <div class="info"><h2><span class="num">2</span>Scan Frame</h2><p class="idea">A bold S inside the camera&#x27;s scanning corners: scanning is the first thing people do in SafePick. Bright lime, and the simplest of all at tiny sizes.</p>
+      <div class="sizes"><figure><img class="s60" src="2-scan-frame/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="2-scan-frame/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="2-scan-frame/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="2-scan-frame/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="2-scan-frame/lockup.svg" alt="Scan Frame logo on a light background"></div>
+    <div class="dark"><img src="2-scan-frame/lockup-dark.svg" alt="Scan Frame logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="2-scan-frame/icon.svg">icon.svg</a><a href="2-scan-frame/icon-1024.png">icon-1024.png</a><a href="2-scan-frame/lockup.svg">lockup.svg</a><a href="2-scan-frame/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c3">
+  <div class="top"><img class="big" src="3-leaf-check/icon.svg" alt="Leaf Check app icon">
+    <div class="info"><h2><span class="num">3</span>Leaf Check</h2><p class="idea">A fresh leaf whose vein is a check mark: natural food, approved. Keeps today&#x27;s green and leaf, in one clean shape.</p>
+      <div class="sizes"><figure><img class="s60" src="3-leaf-check/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="3-leaf-check/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="3-leaf-check/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="3-leaf-check/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="3-leaf-check/lockup.svg" alt="Leaf Check logo on a light background"></div>
+    <div class="dark"><img src="3-leaf-check/lockup-dark.svg" alt="Leaf Check logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="3-leaf-check/icon.svg">icon.svg</a><a href="3-leaf-check/icon-1024.png">icon-1024.png</a><a href="3-leaf-check/lockup.svg">lockup.svg</a><a href="3-leaf-check/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c4">
+  <div class="top"><img class="big" src="4-seedling-code/icon.svg" alt="Seedling Code app icon">
+    <div class="info"><h2><span class="num">4</span>Seedling Code</h2><p class="idea">Today&#x27;s barcode and leaf, redrawn as a barcode with a seedling growing out of one bar. Continuity with the current icon, in a lighter, modern style.</p>
+      <div class="sizes"><figure><img class="s60" src="4-seedling-code/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="4-seedling-code/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="4-seedling-code/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="4-seedling-code/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="4-seedling-code/lockup.svg" alt="Seedling Code logo on a light background"></div>
+    <div class="dark"><img src="4-seedling-code/lockup-dark.svg" alt="Seedling Code logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="4-seedling-code/icon.svg">icon.svg</a><a href="4-seedling-code/icon-1024.png">icon-1024.png</a><a href="4-seedling-code/lockup.svg">lockup.svg</a><a href="4-seedling-code/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c5">
+  <div class="top"><img class="big" src="5-pick-tag/icon.svg" alt="Pick Tag app icon">
+    <div class="info"><h2><span class="num">5</span>Pick Tag</h2><p class="idea">A shelf price tag with a check: the good pick, right in the store. Teal and lime move away from plain green.</p>
+      <div class="sizes"><figure><img class="s60" src="5-pick-tag/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="5-pick-tag/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="5-pick-tag/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="5-pick-tag/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="5-pick-tag/lockup.svg" alt="Pick Tag logo on a light background"></div>
+    <div class="dark"><img src="5-pick-tag/lockup-dark.svg" alt="Pick Tag logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="5-pick-tag/icon.svg">icon.svg</a><a href="5-pick-tag/icon-1024.png">icon-1024.png</a><a href="5-pick-tag/lockup.svg">lockup.svg</a><a href="5-pick-tag/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c6">
+  <div class="top"><img class="big" src="6-leaf-shield/icon.svg" alt="Leaf Shield app icon">
+    <div class="info"><h2><span class="num">6</span>Leaf Shield<span class="new">New</span></h2><p class="idea">A shield made from a leaf, one half deep green and one half fresh green, with the leaf&#x27;s veins. Protection and natural food in one shape.</p>
+      <div class="sizes"><figure><img class="s60" src="6-leaf-shield/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="6-leaf-shield/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="6-leaf-shield/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="6-leaf-shield/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="6-leaf-shield/lockup.svg" alt="Leaf Shield logo on a light background"></div>
+    <div class="dark"><img src="6-leaf-shield/lockup-dark.svg" alt="Leaf Shield logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="6-leaf-shield/icon.svg">icon.svg</a><a href="6-leaf-shield/icon-1024.png">icon-1024.png</a><a href="6-leaf-shield/lockup.svg">lockup.svg</a><a href="6-leaf-shield/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c7">
+  <div class="top"><img class="big" src="7-basket-pick/icon.svg" alt="Basket Pick app icon">
+    <div class="info"><h2><span class="num">7</span>Basket Pick<span class="new">New</span></h2><p class="idea">A shopping basket with a check mark for a handle: the good pick goes in the basket. Plum and lime give it a colour of its own.</p>
+      <div class="sizes"><figure><img class="s60" src="7-basket-pick/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="7-basket-pick/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="7-basket-pick/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="7-basket-pick/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="7-basket-pick/lockup.svg" alt="Basket Pick logo on a light background"></div>
+    <div class="dark"><img src="7-basket-pick/lockup-dark.svg" alt="Basket Pick logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="7-basket-pick/icon.svg">icon.svg</a><a href="7-basket-pick/icon-1024.png">icon-1024.png</a><a href="7-basket-pick/lockup.svg">lockup.svg</a><a href="7-basket-pick/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c8">
+  <div class="top"><img class="big" src="8-sp-monogram/icon.svg" alt="SP Monogram app icon">
+    <div class="info"><h2><span class="num">8</span>SP Monogram<span class="new">New</span></h2><p class="idea">S and P drawn in one even line, with a lime dot. A clean letter mark that works anywhere, from the app icon to a sticker on a shop window.</p>
+      <div class="sizes"><figure><img class="s60" src="8-sp-monogram/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="8-sp-monogram/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="8-sp-monogram/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="8-sp-monogram/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="8-sp-monogram/lockup.svg" alt="SP Monogram logo on a light background"></div>
+    <div class="dark"><img src="8-sp-monogram/lockup-dark.svg" alt="SP Monogram logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="8-sp-monogram/icon.svg">icon.svg</a><a href="8-sp-monogram/icon-1024.png">icon-1024.png</a><a href="8-sp-monogram/lockup.svg">lockup.svg</a><a href="8-sp-monogram/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c9">
+  <div class="top"><img class="big" src="9-inspect-lens/icon.svg" alt="Inspect Lens app icon">
+    <div class="info"><h2><span class="num">9</span>Inspect Lens<span class="new">New</span></h2><p class="idea">A magnifying glass over a leaf: look closer and know what&#x27;s inside. Navy feels calm and trustworthy.</p>
+      <div class="sizes"><figure><img class="s60" src="9-inspect-lens/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="9-inspect-lens/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="9-inspect-lens/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="9-inspect-lens/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="9-inspect-lens/lockup.svg" alt="Inspect Lens logo on a light background"></div>
+    <div class="dark"><img src="9-inspect-lens/lockup-dark.svg" alt="Inspect Lens logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="9-inspect-lens/icon.svg">icon.svg</a><a href="9-inspect-lens/icon-1024.png">icon-1024.png</a><a href="9-inspect-lens/lockup.svg">lockup.svg</a><a href="9-inspect-lens/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c10">
+  <div class="top"><img class="big" src="10-trust-seal/icon.svg" alt="Trust Seal app icon">
+    <div class="info"><h2><span class="num">10</span>Trust Seal<span class="new">New</span></h2><p class="idea">A scalloped seal with a gold check, like a quality stamp. Feels established; the serif name adds a sense of heritage.</p>
+      <div class="sizes"><figure><img class="s60" src="10-trust-seal/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="10-trust-seal/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="10-trust-seal/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="10-trust-seal/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="10-trust-seal/lockup.svg" alt="Trust Seal logo on a light background"></div>
+    <div class="dark"><img src="10-trust-seal/lockup-dark.svg" alt="Trust Seal logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="10-trust-seal/icon.svg">icon.svg</a><a href="10-trust-seal/icon-1024.png">icon-1024.png</a><a href="10-trust-seal/lockup.svg">lockup.svg</a><a href="10-trust-seal/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c11">
+  <div class="top"><img class="big" src="11-compare-cards/icon.svg" alt="Compare Cards app icon">
+    <div class="info"><h2><span class="num">11</span>Compare Cards<span class="new">New</span></h2><p class="idea">Two product cards, the front one approved: compare and pick better, in one picture. The name ends with a green full stop.</p>
+      <div class="sizes"><figure><img class="s60" src="11-compare-cards/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="11-compare-cards/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="11-compare-cards/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="11-compare-cards/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="11-compare-cards/lockup.svg" alt="Compare Cards logo on a light background"></div>
+    <div class="dark"><img src="11-compare-cards/lockup-dark.svg" alt="Compare Cards logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="11-compare-cards/icon.svg">icon.svg</a><a href="11-compare-cards/icon-1024.png">icon-1024.png</a><a href="11-compare-cards/lockup.svg">lockup.svg</a><a href="11-compare-cards/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c12">
+  <div class="top"><img class="big" src="12-open-box/icon.svg" alt="Open Box app icon">
+    <div class="info"><h2><span class="num">12</span>Open Box<span class="new">New</span></h2><p class="idea">An opened box with fresh leaves inside: know what&#x27;s inside before you buy. Friendly and illustrated.</p>
+      <div class="sizes"><figure><img class="s60" src="12-open-box/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="12-open-box/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="12-open-box/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="12-open-box/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="12-open-box/lockup.svg" alt="Open Box logo on a light background"></div>
+    <div class="dark"><img src="12-open-box/lockup-dark.svg" alt="Open Box logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="12-open-box/icon.svg">icon.svg</a><a href="12-open-box/icon-1024.png">icon-1024.png</a><a href="12-open-box/lockup.svg">lockup.svg</a><a href="12-open-box/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c13">
+  <div class="top"><img class="big" src="13-facts-label/icon.svg" alt="Facts Label app icon">
+    <div class="info"><h2><span class="num">13</span>Facts Label<span class="new">New</span></h2><p class="idea">A nutrition-facts panel with a green check badge. Says &quot;we read the label for you&quot; straight away.</p>
+      <div class="sizes"><figure><img class="s60" src="13-facts-label/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="13-facts-label/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="13-facts-label/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="13-facts-label/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="13-facts-label/lockup.svg" alt="Facts Label logo on a light background"></div>
+    <div class="dark"><img src="13-facts-label/lockup-dark.svg" alt="Facts Label logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="13-facts-label/icon.svg">icon.svg</a><a href="13-facts-label/icon-1024.png">icon-1024.png</a><a href="13-facts-label/lockup.svg">lockup.svg</a><a href="13-facts-label/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c14">
+  <div class="top"><img class="big" src="14-food-and-beauty/icon.svg" alt="Food &amp; Beauty app icon">
+    <div class="info"><h2><span class="num">14</span>Food &amp; Beauty<span class="new">New</span></h2><p class="idea">A circle shared by a leaf and a skincare drop: one app for food and for beauty. The italic serif name suits beauty products.</p>
+      <div class="sizes"><figure><img class="s60" src="14-food-and-beauty/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="14-food-and-beauty/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="14-food-and-beauty/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="14-food-and-beauty/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="14-food-and-beauty/lockup.svg" alt="Food &amp; Beauty logo on a light background"></div>
+    <div class="dark"><img src="14-food-and-beauty/lockup-dark.svg" alt="Food &amp; Beauty logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="14-food-and-beauty/icon.svg">icon.svg</a><a href="14-food-and-beauty/icon-1024.png">icon-1024.png</a><a href="14-food-and-beauty/lockup.svg">lockup.svg</a><a href="14-food-and-beauty/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c15">
+  <div class="top"><img class="big" src="15-duo-check/icon.svg" alt="Duo Check app icon">
+    <div class="info"><h2><span class="num">15</span>Duo Check<span class="new">New</span></h2><p class="idea">A bold two-tone check mark and nothing else. The most minimal of the twenty, and easy to animate in the app.</p>
+      <div class="sizes"><figure><img class="s60" src="15-duo-check/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="15-duo-check/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="15-duo-check/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="15-duo-check/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="15-duo-check/lockup.svg" alt="Duo Check logo on a light background"></div>
+    <div class="dark"><img src="15-duo-check/lockup-dark.svg" alt="Duo Check logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="15-duo-check/icon.svg">icon.svg</a><a href="15-duo-check/icon-1024.png">icon-1024.png</a><a href="15-duo-check/lockup.svg">lockup.svg</a><a href="15-duo-check/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c16">
+  <div class="top"><img class="big" src="16-cherry-pick/icon.svg" alt="Cherry Pick app icon">
+    <div class="info"><h2><span class="num">16</span>Cherry Pick<span class="new">New</span></h2><p class="idea">Two cherries, one with a check: to cherry-pick is to choose the best. Warm, playful and easy to remember.</p>
+      <div class="sizes"><figure><img class="s60" src="16-cherry-pick/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="16-cherry-pick/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="16-cherry-pick/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="16-cherry-pick/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="16-cherry-pick/lockup.svg" alt="Cherry Pick logo on a light background"></div>
+    <div class="dark"><img src="16-cherry-pick/lockup-dark.svg" alt="Cherry Pick logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="16-cherry-pick/icon.svg">icon.svg</a><a href="16-cherry-pick/icon-1024.png">icon-1024.png</a><a href="16-cherry-pick/lockup.svg">lockup.svg</a><a href="16-cherry-pick/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c17">
+  <div class="top"><img class="big" src="17-pixel-s/icon.svg" alt="Pixel S app icon">
+    <div class="info"><h2><span class="num">17</span>Pixel S<span class="new">New</span></h2><p class="idea">An S built from square pixels, like data read from a barcode, with one bright pixel. Techy, on fresh mint.</p>
+      <div class="sizes"><figure><img class="s60" src="17-pixel-s/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="17-pixel-s/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="17-pixel-s/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="17-pixel-s/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="17-pixel-s/lockup.svg" alt="Pixel S logo on a light background"></div>
+    <div class="dark"><img src="17-pixel-s/lockup-dark.svg" alt="Pixel S logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="17-pixel-s/icon.svg">icon.svg</a><a href="17-pixel-s/icon-1024.png">icon-1024.png</a><a href="17-pixel-s/lockup.svg">lockup.svg</a><a href="17-pixel-s/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c18">
+  <div class="top"><img class="big" src="18-p-leaf/icon.svg" alt="P Leaf app icon">
+    <div class="info"><h2><span class="num">18</span>P Leaf<span class="new">New</span></h2><p class="idea">A P whose round part is a leaf, on sunny yellow. Cheerful and easy to spot on a home screen.</p>
+      <div class="sizes"><figure><img class="s60" src="18-p-leaf/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="18-p-leaf/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="18-p-leaf/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="18-p-leaf/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="18-p-leaf/lockup.svg" alt="P Leaf logo on a light background"></div>
+    <div class="dark"><img src="18-p-leaf/lockup-dark.svg" alt="P Leaf logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="18-p-leaf/icon.svg">icon.svg</a><a href="18-p-leaf/icon-1024.png">icon-1024.png</a><a href="18-p-leaf/lockup.svg">lockup.svg</a><a href="18-p-leaf/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c19">
+  <div class="top"><img class="big" src="19-leaf-s/icon.svg" alt="Leaf S app icon">
+    <div class="info"><h2><span class="num">19</span>Leaf S<span class="new">New</span></h2><p class="idea">One leaf curved into an S, with its vein running through it. Natural and flowing.</p>
+      <div class="sizes"><figure><img class="s60" src="19-leaf-s/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="19-leaf-s/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="19-leaf-s/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="19-leaf-s/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="19-leaf-s/lockup.svg" alt="Leaf S logo on a light background"></div>
+    <div class="dark"><img src="19-leaf-s/lockup-dark.svg" alt="Leaf S logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="19-leaf-s/icon.svg">icon.svg</a><a href="19-leaf-s/icon-1024.png">icon-1024.png</a><a href="19-leaf-s/lockup.svg">lockup.svg</a><a href="19-leaf-s/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+<article class="concept" id="c20">
+  <div class="top"><img class="big" src="20-shelf-pick/icon.svg" alt="Shelf Pick app icon">
+    <div class="info"><h2><span class="num">20</span>Shelf Pick<span class="new">New</span></h2><p class="idea">Three products on a shelf, the best one highlighted and checked: the better pick on the shelf.</p>
+      <div class="sizes"><figure><img class="s60" src="20-shelf-pick/icon.svg" alt=""><figcaption>Home screen</figcaption></figure><figure><img class="s40" src="20-shelf-pick/icon.svg" alt=""><figcaption>Spotlight</figcaption></figure><figure><img class="s29" src="20-shelf-pick/icon.svg" alt=""><figcaption>Settings</figcaption></figure><figure><img class="s16" src="20-shelf-pick/icon.svg" alt=""><figcaption>Browser tab</figcaption></figure></div></div></div>
+  <div class="lockups"><div class="light"><img src="20-shelf-pick/lockup.svg" alt="Shelf Pick logo on a light background"></div>
+    <div class="dark"><img src="20-shelf-pick/lockup-dark.svg" alt="Shelf Pick logo on a dark background"></div></div>
+  <p class="files"><span>Files:</span><a href="20-shelf-pick/icon.svg">icon.svg</a><a href="20-shelf-pick/icon-1024.png">icon-1024.png</a><a href="20-shelf-pick/lockup.svg">lockup.svg</a><a href="20-shelf-pick/lockup-dark.svg">lockup-dark.svg</a></p>
+</article>
+  </div>
+  <p class="current"><img src="old-icon-180.png" alt="Previous SafePick icon">The previous icon (still in the app for now), for comparison.</p>
+</div>
+</body>
+</html>

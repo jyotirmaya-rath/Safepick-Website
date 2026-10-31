@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SafePick: scan food and beauty barcodes</title>
+  <meta name="description" content="Scan the barcode on packaged food, beauty and personal-care products. SafePick gives you a clear score, what's Approved and Disapproved, allergen alerts and better choices. No ads.">
+  <meta name="theme-color" content="#245B4A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SafePick: know what's inside before you buy">
+  <meta property="og:description" content="Scan a barcode. Get a clear score, allergen alerts and better choices. No ads.">
+  <!-- When the site has its web address, add: <meta property="og:image" content="https://YOUR-DOMAIN/assets/img/icon-512.png"> -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&family=Red+Hat+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- SAFEPICK-BODY-START -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M7.5 8.5v7M10 8.5v7M13 8.5v7M16.5 8.5v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><path d="M7 18h10.5a3.5 3.5 0 0 0 .6-6.95A6 6 0 0 0 6.6 10 4 4 0 0 0 7 18Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 13.5 11.3 15.3 14.8 11.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5 13.9 9a1.5 1.5 0 0 0 .95.95L20.5 12l-5.65 2.05a1.5 1.5 0 0 0-.95.95L12 20.5 10.1 15a1.5 1.5 0 0 0-.95-.95L3.5 12l5.65-2.05a1.5 1.5 0 0 0 .95-.95Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-camera-plus" viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2L9 5h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v6M9 13h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 21 19.5H3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 19s-7-4.3-7-9.4A3.9 3.9 0 0 1 12 7.4a3.9 3.9 0 0 1 7 2.2C19 14.7 12 19 12 19Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 4v11M8 7.5 12 4l4 3.5M6 11v7.5A1.5 1.5 0 0 0 7.5 20h9a1.5 1.5 0 0 0 1.5-1.5V11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-torch" viewBox="0 0 24 24"><path d="M13 3 6 13.5h5L10 21l7-10.5h-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="face-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#16A34A"/><circle cx="8.6" cy="10" r="1.4" fill="#fff"/><circle cx="15.4" cy="10" r="1.4" fill="#fff"/><path d="M7.8 14.2c2.2 2.6 6.2 2.6 8.4 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="face-okay" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#F59E0B"/><circle cx="8.6" cy="10" r="1.4" fill="#1F1500"/><circle cx="15.4" cy="10" r="1.4" fill="#1F1500"/><path d="M8.2 15.4h7.6" fill="none" stroke="#1F1500" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="face-avoid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#EF4444"/><circle cx="8.6" cy="10" r="1.4" fill="#fff"/><circle cx="15.4" cy="10" r="1.4" fill="#fff"/><path d="M7.8 16.6c2.2-2.6 6.2-2.6 8.4 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <clipPath id="sp-logo-clip"><rect width="1024" height="1024" rx="229"/></clipPath><linearGradient id="sp-logo-bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#DAF98A"/><stop offset="1" stop-color="#ADE34B"/></linearGradient>
+    <symbol id="logo-mark" viewBox="0 0 240 240"><g transform="scale(0.23438)"><g clip-path="url(#sp-logo-clip)">
+<rect width="1024" height="1024" fill="url(#sp-logo-bg)"/>
+<path d="M214 364V288A74 74 0 0 1 288 214H364M660 214H736A74 74 0 0 1 810 288V364M810 660V736A74 74 0 0 1 736 810H660M364 810H288A74 74 0 0 1 214 736V660" fill="none" stroke="#0D3A2D" stroke-width="62" stroke-linecap="round"/>
+<path d="M367.5215577190543 589.6912378303199H466.74826147426984Q468.92906815020865 610.9541029207232 481.46870653685676 622.1307371349096Q494.00834492350486 633.307371349096 514.1808066759388 633.307371349096Q534.8984700973574 633.307371349096 546.8929068150209 623.7663421418638Q558.8873435326843 614.2253129346315 558.8873435326843 597.3240611961057Q558.8873435326843 583.1488178025036 549.3463143254521 573.8803894297637Q539.8052851182198 564.6119610570237 525.9026425591098 558.614742698192Q512.0 552.6175243393602 486.3755215577191 544.9847009735745Q449.3018080667594 533.5354659248958 425.8581363004173 522.0862308762171Q402.41446453407514 510.63699582753827 385.5132127955494 488.2837273991655Q368.6119610570237 465.93045897079276 368.6119610570237 429.94714881780254Q368.6119610570237 376.51738525730184 407.3212795549374 346.2586926286509Q446.0305980528512 316.0 508.18358831710714 316.0Q571.4269819193324 316.0 610.1363004172463 346.2586926286509Q648.84561891516 376.51738525730184 651.5716272600835 430.49235048678725H550.7093184979137Q549.6189151599444 411.9554937413074 537.0792767732962 401.32406119610573Q524.5396383866481 390.69262865090406 504.9123783031989 390.69262865090406Q488.0111265646732 390.69262865090406 477.6522948539639 399.6884561891516Q467.29346314325454 408.6842837273992 467.29346314325454 425.5855354659249Q467.29346314325454 444.12239221140476 484.739916550765 454.48122392211405Q502.1863699582754 464.84005563282335 539.260083449235 476.8344923504868Q576.3337969401947 489.3741307371349 599.5048678720445 500.8233657858136Q622.6759388038943 512.2726008344923 639.57719054242 534.0806675938804Q656.4784422809457 555.8887343532684 656.4784422809457 590.2364394993047Q656.4784422809457 622.9485396383867 639.8497913769124 649.663421418637Q623.221140472879 676.3783031988874 591.5994436717664 692.1891515994437Q559.9777468706537 708.0 516.9068150208623 708.0Q474.9262865090403 708.0 441.66898470097357 694.3699582753825Q408.4116828929068 680.739916550765 388.51182197496524 654.0250347705146Q368.6119610570237 627.3101529902643 367.5215577190543 589.6912378303199Z" fill="#0D3A2D"/></g></g></symbol>
+    <symbol id="logo-lockup" viewBox="0 0 989.2 240"><g transform="scale(0.23438)"><g clip-path="url(#sp-logo-clip)">
+<rect width="1024" height="1024" fill="url(#sp-logo-bg)"/>
+<path d="M214 364V288A74 74 0 0 1 288 214H364M660 214H736A74 74 0 0 1 810 288V364M810 660V736A74 74 0 0 1 736 810H660M364 810H288A74 74 0 0 1 214 736V660" fill="none" stroke="#0D3A2D" stroke-width="62" stroke-linecap="round"/>
+<path d="M367.5215577190543 589.6912378303199H466.74826147426984Q468.92906815020865 610.9541029207232 481.46870653685676 622.1307371349096Q494.00834492350486 633.307371349096 514.1808066759388 633.307371349096Q534.8984700973574 633.307371349096 546.8929068150209 623.7663421418638Q558.8873435326843 614.2253129346315 558.8873435326843 597.3240611961057Q558.8873435326843 583.1488178025036 549.3463143254521 573.8803894297637Q539.8052851182198 564.6119610570237 525.9026425591098 558.614742698192Q512.0 552.6175243393602 486.3755215577191 544.9847009735745Q449.3018080667594 533.5354659248958 425.8581363004173 522.0862308762171Q402.41446453407514 510.63699582753827 385.5132127955494 488.2837273991655Q368.6119610570237 465.93045897079276 368.6119610570237 429.94714881780254Q368.6119610570237 376.51738525730184 407.3212795549374 346.2586926286509Q446.0305980528512 316.0 508.18358831710714 316.0Q571.4269819193324 316.0 610.1363004172463 346.2586926286509Q648.84561891516 376.51738525730184 651.5716272600835 430.49235048678725H550.7093184979137Q549.6189151599444 411.9554937413074 537.0792767732962 401.32406119610573Q524.5396383866481 390.69262865090406 504.9123783031989 390.69262865090406Q488.0111265646732 390.69262865090406 477.6522948539639 399.6884561891516Q467.29346314325454 408.6842837273992 467.29346314325454 425.5855354659249Q467.29346314325454 444.12239221140476 484.739916550765 454.48122392211405Q502.1863699582754 464.84005563282335 539.260083449235 476.8344923504868Q576.3337969401947 489.3741307371349 599.5048678720445 500.8233657858136Q622.6759388038943 512.2726008344923 639.57719054242 534.0806675938804Q656.4784422809457 555.8887343532684 656.4784422809457 590.2364394993047Q656.4784422809457 622.9485396383867 639.8497913769124 649.663421418637Q623.221140472879 676.3783031988874 591.5994436717664 692.1891515994437Q559.9777468706537 708.0 516.9068150208623 708.0Q474.9262865090403 708.0 441.66898470097357 694.3699582753825Q408.4116828929068 680.739916550765 388.51182197496524 654.0250347705146Q368.6119610570237 627.3101529902643 367.5215577190543 589.6912378303199Z" fill="#0D3A2D"/></g></g><g transform="translate(298.0 164.6)"><path d="M5.12 -29.28H32.160000000000004Q32.64 -24.64 36.480000000000004 -21.759999999999998Q40.32 -18.88 45.92 -18.88Q51.04 -18.88 53.84 -20.88Q56.64 -22.88 56.64 -26.080000000000002Q56.64 -29.92 52.64 -31.76Q48.64 -33.6 39.68 -35.84Q30.080000000000002 -38.08 23.68 -40.56Q17.28 -43.04 12.64 -48.4Q8.0 -53.76 8.0 -62.88Q8.0 -70.56 12.24 -76.88Q16.48 -83.2 24.72 -86.88Q32.96 -90.56 44.32 -90.56Q61.120000000000005 -90.56 70.80000000000001 -82.24000000000001Q80.48 -73.92 81.92 -60.160000000000004H56.64Q56.0 -64.8 52.56 -67.52Q49.120000000000005 -70.24 43.52 -70.24Q38.72 -70.24 36.16 -68.4Q33.6 -66.56 33.6 -63.36Q33.6 -59.52 37.68 -57.6Q41.76 -55.68 50.4 -53.76Q60.32 -51.2 66.56 -48.72Q72.8 -46.24 77.52 -40.72Q82.24 -35.2 82.4 -25.92Q82.4 -18.080000000000002 78.0 -11.920000000000002Q73.60000000000001 -5.76 65.36000000000001 -2.2399999999999998Q57.120000000000005 1.28 46.24 1.28Q34.56 1.28 25.44 -2.7199999999999998Q16.32 -6.72 11.04 -13.68Q5.76 -20.64 5.12 -29.28ZM129.92000000000002 -90.56Q139.36 -90.56 146.48000000000002 -86.72Q153.6 -82.88 157.44 -76.64V-89.28H184.8V0.0H157.44V-12.64Q153.44 -6.4 146.32 -2.56Q139.2 1.28 129.76 1.28Q118.88 1.28 109.91999999999999 -4.4Q100.96 -10.08 95.75999999999999 -20.56Q90.56 -31.04 90.56 -44.800000000000004Q90.56 -58.56 95.75999999999999 -68.96000000000001Q100.96 -79.36 109.91999999999999 -84.96000000000001Q118.88 -90.56 129.92000000000002 -90.56ZM137.92000000000002 -66.72Q129.76 -66.72 124.08 -60.879999999999995Q118.4 -55.04 118.4 -44.800000000000004Q118.4 -34.56 124.08 -28.560000000000002Q129.76 -22.56 137.92000000000002 -22.56Q146.07999999999998 -22.56 151.76 -28.479999999999997Q157.44 -34.4 157.44 -44.64Q157.44 -54.88 151.76 -60.8Q146.07999999999998 -66.72 137.92000000000002 -66.72ZM246.23999999999998 -66.56H231.51999999999998V0.0H204.15999999999997V-66.56H194.23999999999998V-89.28H204.15999999999997V-91.84Q204.15999999999997 -108.32000000000001 213.59999999999997 -116.88Q223.04 -125.44 241.27999999999997 -125.44Q244.32 -125.44 245.76 -125.28V-102.08Q237.92 -102.56 234.71999999999997 -99.84Q231.51999999999998 -97.12 231.51999999999998 -90.08V-89.28H246.23999999999998ZM339.52 -38.08H277.59999999999997Q278.24 -29.76 282.96000000000004 -25.36Q287.68 -20.96 294.56 -20.96Q304.8 -20.96 308.8 -29.6H337.91999999999996Q335.68 -20.8 329.84000000000003 -13.76Q324.0 -6.72 315.2 -2.7199999999999998Q306.4 1.28 295.52 1.28Q282.4 1.28 272.15999999999997 -4.32Q261.91999999999996 -9.92 256.15999999999997 -20.32Q250.39999999999998 -30.72 250.39999999999998 -44.64Q250.39999999999998 -58.56 256.08 -68.96000000000001Q261.76 -79.36 272.0 -84.96000000000001Q282.24 -90.56 295.52 -90.56Q308.48 -90.56 318.56 -85.12Q328.64 -79.68 334.32 -69.60000000000001Q340.0 -59.52 340.0 -46.08Q340.0 -42.24 339.52 -38.08ZM312.0 -53.28Q312.0 -60.32 307.2 -64.48Q302.4 -68.64 295.2 -68.64Q288.32 -68.64 283.6 -64.64Q278.88 -60.64 277.76 -53.28ZM406.08 -90.56Q417.12 -90.56 426.08 -84.96000000000001Q435.03999999999996 -79.36 440.23999999999995 -68.96000000000001Q445.43999999999994 -58.56 445.43999999999994 -44.800000000000004Q445.43999999999994 -31.04 440.23999999999995 -20.56Q435.03999999999996 -10.08 426.08 -4.4Q417.12 1.28 406.08 1.28Q396.79999999999995 1.28 389.67999999999995 -2.56Q382.55999999999995 -6.4 378.55999999999995 -12.48V42.56H351.2V-89.28H378.55999999999995V-76.64Q382.55999999999995 -82.88 389.59999999999997 -86.72Q396.64 -90.56 406.08 -90.56ZM397.91999999999996 -66.72Q389.76 -66.72 384.08 -60.8Q378.4 -54.88 378.4 -44.64Q378.4 -34.4 384.08 -28.479999999999997Q389.76 -22.56 397.91999999999996 -22.56Q406.08 -22.56 411.84 -28.560000000000002Q417.59999999999997 -34.56 417.59999999999997 -44.800000000000004Q417.59999999999997 -55.04 411.91999999999996 -60.879999999999995Q406.24 -66.72 397.91999999999996 -66.72ZM454.08 -113.28Q454.08 -119.68 458.64 -123.92Q463.2 -128.16 470.4 -128.16Q477.43999999999994 -128.16 481.99999999999994 -123.92Q486.55999999999995 -119.68 486.55999999999995 -113.28Q486.55999999999995 -107.04 481.99999999999994 -102.80000000000001Q477.43999999999994 -98.56 470.4 -98.56Q463.2 -98.56 458.64 -102.80000000000001Q454.08 -107.04 454.08 -113.28ZM484.0 -89.28V0.0H456.64V-89.28ZM540.0 -90.56Q556.8 -90.56 568.0799999999999 -81.76Q579.36 -72.96000000000001 582.88 -56.96H553.76Q550.0799999999999 -67.2 539.52 -67.2Q532.0 -67.2 527.52 -61.36Q523.04 -55.52 523.04 -44.64Q523.04 -33.76 527.52 -27.92Q532.0 -22.080000000000002 539.52 -22.080000000000002Q550.0799999999999 -22.080000000000002 553.76 -32.32H582.88Q579.36 -16.64 568.0 -7.680000000000001Q556.64 1.28 540.0 1.28Q526.88 1.28 516.72 -4.32Q506.55999999999995 -9.92 500.88 -20.32Q495.2 -30.72 495.2 -44.64Q495.2 -58.56 500.88 -68.96000000000001Q506.55999999999995 -79.36 516.72 -84.96000000000001Q526.88 -90.56 540.0 -90.56ZM648.8 0.0 621.5999999999999 -37.44V0.0H594.2399999999999V-118.4H621.5999999999999V-52.96L648.64 -89.28H682.4L645.28 -44.480000000000004L682.7199999999999 0.0Z" fill="currentColor"/></g></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="SafePick home">
+      <svg class="brand-lockup" viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#for-you">For you</a>
+      <a href="#scores">How scores work</a>
+      <a href="#premium">Premium</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-small btn-ink" href="#download">Get the app</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Food · Beauty · Personal care</p>
+        <h1 class="display">Know what's inside <span class="nowrap">before you buy.</span></h1>
+        <p class="lede">Scan the barcode on any packaged food or beauty product. In seconds SafePick shows a clear score, what's Approved and Disapproved, and better choices on the same shelf.</p>
+        <div class="store-row">
+          <a class="store-btn" data-store="appStore" href="#download">
+            <svg aria-hidden="true"><use href="#i-download"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="store-btn" data-store="googlePlay" href="#download">
+            <svg aria-hidden="true"><use href="#i-download"/></svg>
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+        </div>
+        <ul class="hero-facts" aria-label="At a glance">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No account needed to scan</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>1,000 free scans a month</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage" aria-label="SafePick scanning a pack of cookies and showing the result">
+        <div class="phone phone-hero">
+          <div class="screen screen-scan">
+            <div class="sb sb-dark"><span>9:41</span><span class="sb-icons"><i></i><i></i><i></i></span></div>
+            <div class="scan-top">
+              <span class="round-btn"><svg aria-hidden="true"><use href="#i-close"/></svg></span>
+              <span class="scan-title">Scan a product</span>
+              <span class="round-btn"><svg aria-hidden="true"><use href="#i-torch"/></svg></span>
+            </div>
+            <div class="viewfinder">
+              <div class="pack">
+                <div class="pack-name">DOUBLE CHOCOLATE<br>COOKIES</div>
+                <div class="pack-code"><svg class="barcode" viewBox="0 0 113 66" role="img" aria-label="EAN-13 barcode 7542109846316"><g fill="currentColor"><rect x="9" y="0" width="1" height="58"/><rect x="11" y="0" width="1" height="58"/><rect x="13" y="0" width="2" height="52"/><rect x="18" y="0" width="1" height="52"/><rect x="21" y="0" width="3" height="52"/><rect x="25" y="0" width="1" height="52"/><rect x="28" y="0" width="1" height="52"/><rect x="31" y="0" width="2" height="52"/><rect x="34" y="0" width="2" height="52"/><rect x="38" y="0" width="2" height="52"/><rect x="43" y="0" width="2" height="52"/><rect x="46" y="0" width="1" height="52"/><rect x="49" y="0" width="1" height="52"/><rect x="51" y="0" width="3" height="52"/><rect x="55" y="0" width="1" height="58"/><rect x="57" y="0" width="1" height="58"/><rect x="59" y="0" width="1" height="52"/><rect x="62" y="0" width="1" height="52"/><rect x="66" y="0" width="1" height="52"/><rect x="68" y="0" width="3" height="52"/><rect x="73" y="0" width="1" height="52"/><rect x="75" y="0" width="1" height="52"/><rect x="80" y="0" width="1" height="52"/><rect x="85" y="0" width="1" height="52"/><rect x="87" y="0" width="2" height="52"/><rect x="91" y="0" width="2" height="52"/><rect x="94" y="0" width="1" height="52"/><rect x="96" y="0" width="1" height="52"/><rect x="101" y="0" width="1" height="58"/><rect x="103" y="0" width="1" height="58"/></g><g class="barcode-digits"><text x="3" y="63">7</text><text x="31" y="63" text-anchor="middle">542109</text><text x="78" y="63" text-anchor="middle">846316</text></g></svg></div>
+              </div>
+              <span class="vf-corner tl"></span><span class="vf-corner tr"></span><span class="vf-corner bl"></span><span class="vf-corner br"></span>
+              <span class="scan-line" aria-hidden="true"></span>
+            </div>
+            <div class="session-pill">Scanned this session (1)</div>
+            <div class="quick-card">
+              <div class="qc-head">
+                <img src="assets/img/cat/biscuits.png" alt="" width="44" height="44">
+                <div class="qc-id">
+                  <b>Double Chocolate Cookies</b>
+                  <span>Cookies · 300 g</span>
+                </div>
+                <div class="ring ring-sm" style="--v:29;--c:#EF4444">
+                  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg>
+                  <span>29</span>
+                </div>
+              </div>
+              <div class="qc-verdict avoid"><svg aria-hidden="true"><use href="#face-avoid"/></svg>Avoid <em>Several concerns</em></div>
+              <ul class="qc-reasons">
+                <li><i class="dot bad"></i>High in added sugar</li>
+                <li><i class="dot bad"></i>High in saturated fat</li>
+                <li><i class="dot warn"></i>Palm oil listed</li>
+              </ul>
+              <div class="qc-actions"><span class="app-btn">See full details</span><span class="app-btn ghost">Scan another</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card fc-better" aria-hidden="true">
+          <span class="fc-label">Better choice</span>
+          <div class="fc-row">
+            <img src="assets/img/cat/snack-bars.png" alt="" width="40" height="40">
+            <div><b>Oat &amp; Raisin Cookies</b><span class="tag okay">58 · Okay</span></div>
+          </div>
+        </div>
+        <div class="float-card fc-allergy" aria-hidden="true">
+          <svg aria-hidden="true"><use href="#i-alert"/></svg>
+          <div><b>Milk allergen detected</b><span>Matches the allergy saved in your profile</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stat-strip">
+        <div><dt>Products</dt><dd>1M+</dd><p>sold in Canada, the USA and India</p></div>
+        <div><dt>Ads</dt><dd>0</dd><p>none in the app, ever</p></div>
+        <div><dt>Verdicts</dt><dd>3</dd><p>Good, Okay or Avoid, at a glance</p></div>
+        <div><dt>Free scans</dt><dd>1,000</dd><p>different products every month</p></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Scan, read, choose. In the aisle.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-n">1</span>
+          <h3>Scan any barcode</h3>
+          <p>Point your camera at the pack. SafePick works out whether it's food, beauty or personal care, so there's nothing to choose first.</p>
+          <p class="fine">Torch for dim aisles. If a code won't read, you get tips, or type the number in.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">2</span>
+          <h3>See the verdict</h3>
+          <p>A score out of 100 with one word, Good, Okay or Avoid, and the two or three reasons behind it, right on the scanner.</p>
+          <p class="fine">Keep scanning: every pack you read stays in a strip at the bottom.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">3</span>
+          <h3>Pick something better</h3>
+          <p>Similar products from the same shelf that score higher, each with its own picture and score, so you can compare before you put it in the cart.</p>
+          <p class="fine">Shopping in India? Store buttons open the product in your favourite app.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== THE VERDICT ===================== -->
+  <section class="section section-tint" id="verdict">
+    <div class="wrap split">
+      <div class="split-media">
+        <div class="phone">
+          <div class="screen">
+            <div class="sb"><span>9:41</span><span class="sb-icons"><i></i><i></i><i></i></span></div>
+            <div class="app-top">
+              <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg>
+              <span class="app-logo"><svg viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg></span>
+              <span class="app-top-r"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg></span>
+            </div>
+            <div class="app-body">
+              <div class="p-head">
+                <img src="assets/img/cat/biscuits.png" alt="" width="56" height="56">
+                <div><b>Double Chocolate Cookies</b><span>Cookies · 300 g</span></div>
+              </div>
+              <div class="score-card avoid">
+                <div class="ring" style="--v:29;--c:#EF4444">
+                  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg>
+                  <span>29<small>/100</small></span>
+                </div>
+                <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-avoid"/></svg>Avoid</span><em>Several concerns</em></div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Nutrition highlights <small>per 100 g</small></div>
+                <div class="tiles">
+                  <div class="tile bad"><span>Added sugar</span><b>30 g</b><em>High</em></div>
+                  <div class="tile bad"><span>Sat. fat</span><b>11 g</b><em>High</em></div>
+                  <div class="tile warn"><span>Fibre</span><b>3 g</b><em>Some</em></div>
+                  <div class="tile good"><span>Trans fat</span><b>0 g</b><em>Low</em></div>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="facts-row"><span class="fr-h bad"><svg aria-hidden="true"><use href="#i-minus"/></svg>Disapproved</span></div>
+                <div class="facts-line"><span>Added sugar</span><b>30 g</b></div>
+                <div class="facts-line"><span>Saturated fat</span><b>11 g</b></div>
+                <div class="facts-row"><span class="fr-h good"><svg aria-hidden="true"><use href="#i-check"/></svg>Approved</span></div>
+                <div class="facts-line"><span>Trans fat</span><b>0 g</b></div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Better choices</div>
+                <div class="alt-strip">
+                  <div class="alt"><img src="assets/img/cat/snack-bars.png" alt="" width="40" height="40"><b>Oat &amp; Raisin Cookies</b><span class="tag okay">58 · Okay</span></div>
+                  <div class="alt"><img src="assets/img/cat/bread.png" alt="" width="40" height="40"><b>Whole Wheat Digestives</b><span class="tag okay">63 · Okay</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-fade"></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">The product page</p>
+        <h2>One clear answer first. Details when you want them.</h2>
+        <p class="body-lg">People scan fast in a store, so the page leads with what you need and folds the rest away.</p>
+        <ul class="points">
+          <li><b>A score with a word and a face.</b> Every score shows a number, a colour, a word and a face, so colour is never the only signal.</li>
+          <li><b>Approved and Disapproved.</b> The nutrients that help and the ones that hold it back, per 100 g or per serving. Tap to switch.</li>
+          <li><b>Key takeaways.</b> What's good, the main concern, and a sensible next step.</li>
+          <li><b>Better choices that are really better.</b> Options come from the same kind of product, never score lower than what you scanned, and never suggest a non-veg option for a vegetarian product.</li>
+        </ul>
+        <div class="bands" aria-label="Score bands: 0 to 49 Avoid, 50 to 69 Okay, 70 to 100 Good">
+          <div class="band-bar">
+            <span class="b-avoid" style="flex:50">Avoid</span>
+            <span class="b-okay" style="flex:20">Okay</span>
+            <span class="b-good" style="flex:31">Good</span>
+          </div>
+          <div class="band-ticks" aria-hidden="true"><span style="left:0">0</span><span style="left:49.5%">50</span><span style="left:69.3%">70</span><span style="left:100%">100</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOR YOU ===================== -->
+  <section class="section" id="for-you">
+    <div class="wrap split split-rev">
+      <div class="split-copy">
+        <p class="eyebrow">Personalized for you</p>
+        <h2>Tell it what matters. Every scan checks it for you.</h2>
+        <p class="body-lg">Add allergies, a diet or health goals once. From then on each result also says how the product fits you. It's optional, and free for everyone.</p>
+
+        <div class="pref-group">
+          <h3>Allergies and intolerances</h3>
+          <p>An allergy gets a red warning; an intolerance gets an amber notice. Add any other allergen by name.</p>
+          <ul class="allergen-row">
+            <li><img src="assets/img/allergen/peanut.png" alt="" width="40" height="40">Peanut</li>
+            <li><img src="assets/img/allergen/treeNut.png" alt="" width="40" height="40">Tree nuts</li>
+            <li><img src="assets/img/allergen/milk.png" alt="" width="40" height="40">Milk</li>
+            <li><img src="assets/img/allergen/egg.png" alt="" width="40" height="40">Egg</li>
+            <li><img src="assets/img/allergen/wheat.png" alt="" width="40" height="40">Wheat</li>
+            <li><img src="assets/img/allergen/soy.png" alt="" width="40" height="40">Soy</li>
+            <li><img src="assets/img/allergen/sesame.png" alt="" width="40" height="40">Sesame</li>
+            <li><img src="assets/img/allergen/fish.png" alt="" width="40" height="40">Fish</li>
+            <li><img src="assets/img/allergen/crustacean.png" alt="" width="40" height="40">Crustaceans</li>
+            <li><img src="assets/img/allergen/mustard.png" alt="" width="40" height="40">Mustard</li>
+            <li><img src="assets/img/allergen/sulphites.png" alt="" width="40" height="40">Sulphites</li>
+          </ul>
+        </div>
+
+        <div class="pref-cols">
+          <div class="pref-group">
+            <h3>Health-related needs</h3>
+            <ul class="chips">
+              <li>Watch sugar</li><li>Lower sodium</li><li>Lower saturated fat</li><li>Weight management</li><li>Kidney-conscious</li>
+            </ul>
+          </div>
+          <div class="pref-group">
+            <h3>Diet and lifestyle</h3>
+            <ul class="chips">
+              <li>Vegetarian</li><li>Vegan</li><li>Jain</li><li>Gluten-free</li><li>Lactose-free</li>
+            </ul>
+          </div>
+          <div class="pref-group">
+            <h3>Goals</h3>
+            <ul class="chips">
+              <li>Lower added sugar</li><li>Lower sodium</li><li>Higher fibre</li>
+            </ul>
+          </div>
+          <div class="pref-group">
+            <h3>Ingredients to avoid</h3>
+            <ul class="chips">
+              <li>Your own list</li><li>In food</li><li>In beauty</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Your choices stay on your phone unless you switch on "Keep on my account", and they're never used for ads. SafePick is not a medical service: it can't guarantee a product is free of an allergen, so always read the pack.</p>
+      </div>
+
+      <div class="split-media">
+        <div class="phone">
+          <div class="screen">
+            <div class="sb"><span>9:41</span><span class="sb-icons"><i></i><i></i><i></i></span></div>
+            <div class="app-top">
+              <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg>
+              <span class="app-logo"><svg viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg></span>
+              <span class="app-top-r"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg></span>
+            </div>
+            <div class="app-body">
+              <div class="p-head">
+                <img src="assets/img/cat/peanut-butter.png" alt="" width="56" height="56">
+                <div><b>Creamy Peanut Butter</b><span>Spreads · 500 g</span></div>
+              </div>
+              <div class="score-card okay">
+                <div class="ring" style="--v:61;--c:#F59E0B">
+                  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg>
+                  <span>61<small>/100</small></span>
+                </div>
+                <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-okay"/></svg>Okay</span><em>Some concerns to be aware of</em></div>
+              </div>
+              <div class="alert-card">
+                <div class="al-chip"><svg aria-hidden="true"><use href="#i-alert"/></svg>Personalized safety alert</div>
+                <b>Peanut allergen detected</b>
+                <p>This product contains peanuts, matching the allergy saved in your profile.</p>
+                <p class="al-strong">Avoid this product if you have a peanut allergy.</p>
+                <p class="al-fine">Always verify the package's ingredient and allergen statements.</p>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">For you</div>
+                <div class="foryou-line"><span>Watch sugar</span><b>Sugar 6 g</b><em class="lv good">Low</em></div>
+                <div class="foryou-line"><span>Lower sodium</span><b>Sodium 420 mg</b><em class="lv warn">Moderate</em></div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Better choices for you</div>
+                <div class="alt-line">
+                  <img src="assets/img/cat/peanut-butter.png" alt="" width="36" height="36">
+                  <div><b>Sunflower Seed Butter</b><span class="fits"><svg aria-hidden="true"><use href="#i-check"/></svg>Fits your preferences</span></div>
+                  <span class="tag good">72</span>
+                </div>
+              </div>
+            </div>
+            <div class="screen-fade"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BEAUTY ===================== -->
+  <section class="section section-tint" id="beauty">
+    <div class="wrap split">
+      <div class="split-media">
+        <div class="phone">
+          <div class="screen">
+            <div class="sb"><span>9:41</span><span class="sb-icons"><i></i><i></i><i></i></span></div>
+            <div class="app-top">
+              <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg>
+              <span class="app-logo"><svg viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg></span>
+              <span class="app-top-r"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg></span>
+            </div>
+            <div class="app-body">
+              <div class="p-head">
+                <img src="assets/img/cat/face-serum.png" alt="" width="56" height="56">
+                <div><b>Hydrating Face Serum</b><span>Face serum · 30 ml</span></div>
+              </div>
+              <div class="score-card good">
+                <div class="ring" style="--v:74;--c:#16A34A">
+                  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg>
+                  <span>74<small>/100</small></span>
+                </div>
+                <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-good"/></svg>Good</span><em>Good overall</em></div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Ingredient check</div>
+                <div class="check-line ok"><svg aria-hidden="true"><use href="#i-check"/></svg>No parabens listed</div>
+                <div class="check-line ok"><svg aria-hidden="true"><use href="#i-check"/></svg>No sulfates listed</div>
+                <div class="check-line warn"><svg aria-hidden="true"><use href="#i-alert"/></svg>Fragrance listed</div>
+                <div class="check-line ok"><svg aria-hidden="true"><use href="#i-check"/></svg>No mineral oil listed</div>
+                <div class="check-line ok"><svg aria-hidden="true"><use href="#i-check"/></svg>No drying alcohol listed</div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Key ingredients</div>
+                <div class="ing-chips"><span>Glycerin</span><span>Niacinamide</span><span>Sodium hyaluronate</span></div>
+              </div>
+              <div class="app-card">
+                <div class="ac-title">Skin match</div>
+                <div class="skin-grid">
+                  <span class="ok">Oily</span><span class="ok">Dry</span><span class="warn">Sensitive</span><span class="ok">Acne-prone</span>
+                </div>
+              </div>
+            </div>
+            <div class="screen-fade"></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">Beauty and personal care</p>
+        <h2>Skincare, makeup and haircare, read from the ingredient list.</h2>
+        <p class="body-lg">Scan a serum, a sunscreen or a shampoo the same way you scan food. SafePick reads the INCI ingredient list and shows what's in it and what isn't.</p>
+        <ul class="points">
+          <li><b>Listed or not listed.</b> A quick checklist for parabens, sulfates, fragrance, mineral oil and drying alcohol. SafePick says "not listed", never "free from".</li>
+          <li><b>Skin match.</b> How the formula suits oily, dry, sensitive and acne-prone skin.</li>
+          <li><b>A flag means "take a second look".</b> It isn't proof of harm: an ingredient list can't show amounts, how a product is made or how your skin will react. Patch-test new products.</li>
+          <li><b>Well-rated options.</b> Similar products with better-rated formulas, when there are some.</li>
+        </ul>
+        <ul class="thumb-row" aria-label="Examples of beauty and personal-care categories">
+          <li><img src="assets/img/cat/face-serum.png" alt="" width="52" height="52">Serums</li>
+          <li><img src="assets/img/cat/moisturiser.png" alt="" width="52" height="52">Moisturizers</li>
+          <li><img src="assets/img/cat/sunscreen.png" alt="" width="52" height="52">Sunscreen</li>
+          <li><img src="assets/img/cat/shampoo.png" alt="" width="52" height="52">Shampoo</li>
+          <li><img src="assets/img/cat/lipstick.png" alt="" width="52" height="52">Makeup</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVERYDAY ===================== -->
+  <section class="section" id="everyday">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Everyday tools</p>
+        <h2>Small things that make the next shop easier.</h2>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-search"/></svg>
+          <h3>Explore and search</h3>
+          <p>Look a product up by name, or browse food and beauty categories when you're not in the store.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-clock"/></svg>
+          <h3>Your scan history</h3>
+          <p>Everything you've scanned, grouped by today, yesterday and earlier, in a list or a grid.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-spark"/></svg>
+          <h3>Recommended for you</h3>
+          <p>Better picks for the products you buy most, based on your scans and your preferences.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-offline"/></svg>
+          <h3>Works with a weak signal</h3>
+          <p>Products you've opened are saved on your phone and shown with the date they were saved when the network drops.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-lock"/></svg>
+          <h3>App lock</h3>
+          <p>Ask for Face ID, your fingerprint or your phone passcode each time SafePick opens.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-camera-plus"/></svg>
+          <h3>Add a missing product</h3>
+          <p>Photograph the pack and type the label. A reviewer checks it against your photos before anyone else sees it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW SCORES WORK ===================== -->
+  <section class="section section-tint" id="scores">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How scores work</p>
+        <h2>Honest about what a score can and can't tell you.</h2>
+      </div>
+      <div class="method">
+        <div class="method-lead">
+          <p class="body-lg">Food and drink scores compare what the label declares, per 100 g or 100 ml, with reference ranges and a few category adjustments.</p>
+          <ul class="nutrient-list" aria-label="What the food score looks at">
+            <li>Energy</li><li>Added sugar</li><li>Total sugar</li><li>Saturated fat</li><li>Trans fat</li><li>Sodium</li><li>Protein</li><li>Fibre</li><li>Ingredient list</li>
+          </ul>
+          <p>Beauty scores use the ingredient list only. Wording describes the label, like "high in sodium per 100 g", never what a food will do to you.</p>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3>Missing data is never guessed</h3>
+            <p>Nutrients a pack doesn't declare are left out and shown as "Not on label". With too little data there's no number at all, and partial data caps the score at 59, so it can't read Good.</p>
+          </article>
+          <article>
+            <h3>Some products aren't scored</h3>
+            <p>Baby food and infant formula, supplements, alcoholic drinks, and basics like salt, spices, plain tea, coffee and water. The page says why instead of showing a number.</p>
+          </article>
+          <article>
+            <h3>"Why this score?" on every product</h3>
+            <p>The nutrient and ingredient flags, the positives, the method version, the data source and when the data was last updated.</p>
+          </article>
+          <article>
+            <h3>Where the data comes from</h3>
+            <p>Over a million products sold in Canada, the USA and India, from Open Food Facts and Open Beauty Facts, plus community submissions checked against label photos.</p>
+          </article>
+        </div>
+      </div>
+      <p class="callout"><b>Not medical advice.</b> SafePick reads what's printed on a pack and turns it into a score and plain notes. It never replaces the label or advice from your doctor, dietitian, pharmacist or dermatologist, especially for allergies, diabetes, pregnancy, children and skin conditions.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PRIVACY / NO ADS ===================== -->
+  <section class="section" id="privacy">
+    <div class="wrap split split-privacy">
+      <div class="facts-panel" role="table" aria-label="SafePick facts">
+        <div class="fp-title" role="row"><span role="columnheader">SafePick Facts</span></div>
+        <div class="fp-serving" role="row"><span role="cell">Per month, free version</span></div>
+        <div class="fp-rule thick" aria-hidden="true"></div>
+        <div class="fp-head" role="row"><span role="columnheader">Amount</span></div>
+        <div class="fp-line big" role="row"><span role="rowheader">Scans</span><b role="cell">1,000</b></div>
+        <div class="fp-rule mid" aria-hidden="true"></div>
+        <div class="fp-line" role="row"><span role="rowheader">Ads</span><b role="cell">0</b></div>
+        <div class="fp-line" role="row"><span role="rowheader">Tracking across apps</span><b role="cell">0</b></div>
+        <div class="fp-line" role="row"><span role="rowheader">Data sold</span><b role="cell">0</b></div>
+        <div class="fp-line" role="row"><span role="rowheader">Account needed to scan</span><b role="cell">None</b></div>
+        <div class="fp-line" role="row"><span role="rowheader">Scores changed by store links</span><b role="cell">0</b></div>
+        <div class="fp-rule thick" aria-hidden="true"></div>
+        <p class="fp-foot">Scan history, saved products, lists, reminders and your health and diet preferences are kept on your phone.</p>
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">Privacy</p>
+        <h2>No ads. No tracking. Free to scan.</h2>
+        <p class="body-lg">SafePick shows no advertising and doesn't track you across other apps or websites. Your data is never sold.</p>
+        <ul class="points">
+          <li><b>Start as a guest.</b> Scanning never needs an account. Your scans stay on your phone.</li>
+          <li><b>Sign in only when it helps.</b> Google or Apple sign-in, no password, used for Premium and for history on all your devices. You can delete your account any time in Settings.</li>
+          <li><b>How SafePick earns.</b> Premium, and commissions from some store links at no extra cost to you. Neither ever changes a score, a ranking or the better-choices list.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREMIUM ===================== -->
+  <section class="section section-tint" id="premium">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Plans</p>
+        <h2>Free to scan. Premium when you want more.</h2>
+        <p class="body-lg">Scores, allergen alerts and better choices are free for everyone. Premium adds full details and personal tools.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <header><h3>Free</h3><p class="plan-sub">For everyone</p></header>
+          <ul class="plan-list">
+            <li>1,000 different products a month</li>
+            <li>Scores, Good / Okay / Avoid, Approved and Disapproved</li>
+            <li>Allergen alerts and your health and diet checks</li>
+            <li>The nutrition table</li>
+            <li>Better choices</li>
+            <li>Store links where available</li>
+            <li>No account needed</li>
+          </ul>
+        </article>
+        <article class="plan plan-featured">
+          <header><h3>Premium</h3><p class="plan-sub">Monthly · cancel any time</p></header>
+          <p class="plan-plus">Everything in Free, plus:</p>
+          <ul class="plan-list">
+            <li>Unlimited scans</li>
+            <li>The full ingredient list</li>
+            <li>How each score was worked out</li>
+            <li>Product data and verification</li>
+            <li>Ask questions about a product</li>
+            <li>Weekend shopping and buy-again reminders</li>
+            <li>Lists and favourites</li>
+            <li>Your history on all your devices</li>
+          </ul>
+          <p class="plan-note">After you cancel, Premium stays on until the end of the month you paid for.</p>
+        </article>
+        <article class="plan">
+          <header><h3>Supporter Pass</h3><p class="plan-sub">Pay once · one year</p></header>
+          <ul class="plan-list">
+            <li>One year of Premium</li>
+            <li>Choose your amount: every amount gives the same year</li>
+            <li>Ends on its own. Nothing renews and nothing is charged again</li>
+            <li>Paid through the App Store or Google Play. SafePick never sees your card details</li>
+          </ul>
+          <p class="plan-note">A higher amount simply supports SafePick more.</p>
+        </article>
+      </div>
+      <p class="fine center">Premium and the Supporter Pass need a free Google or Apple account, so they follow you to a new phone. Prices are shown in the App Store or Google Play before you confirm.</p>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTRIES ===================== -->
+  <section class="section" id="countries">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where it works</p>
+        <h2>Made for Canada. Ready for the USA and India.</h2>
+        <p class="body-lg">Choose your country the first time you open SafePick. It shows products and stores for where you shop, and you can change it any time in Settings.</p>
+      </div>
+      <div class="countries">
+        <article class="country country-first">
+          <p class="country-tag">Launching first</p>
+          <h3>Canada</h3>
+          <p class="country-num"><b>125,000+</b> foods sold in Canada</p>
+          <p class="country-stores">Scores, allergen alerts and better choices for what's on Canadian shelves.</p>
+        </article>
+        <article class="country">
+          <p class="country-tag">Supported</p>
+          <h3>United States</h3>
+          <p class="country-num"><b>935,000+</b> foods sold in the USA</p>
+          <p class="country-stores">The largest catalogue in the app, from the same open databases.</p>
+        </article>
+        <article class="country">
+          <p class="country-tag">Supported</p>
+          <h3>India</h3>
+          <p class="country-num"><b>21,000+</b> foods sold in India</p>
+          <p class="country-stores">One-tap store links: Blinkit, Zepto, Swiggy Instamart, BigBasket, Flipkart, JioMart, Amazon.in and Nykaa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section section-tint" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. Open the app and start scanning as a guest. An account (Google or Apple) is only needed for Premium, for history on all your devices, and for adding a missing product.</p>
+        </details>
+        <details>
+          <summary>Is SafePick free?</summary>
+          <p>Yes. Everyone can scan 1,000 different products a month and get scores, Approved and Disapproved, allergen alerts, health and diet checks and better choices. Premium is optional and adds unlimited scans, full product details and personal tools.</p>
+        </details>
+        <details>
+          <summary>Can SafePick tell me if a product is safe for my allergy?</summary>
+          <p>No app can promise that. SafePick checks the allergies you saved against the ingredient list, the allergen information and the product name, and warns you when it finds a match. When a product has no readable ingredient list, it says the allergen can't be verified. A missing warning never means a product is free of an allergen: always check the label, including "may contain".</p>
+        </details>
+        <details>
+          <summary>Where does the product information come from?</summary>
+          <p>From Open Food Facts and Open Beauty Facts, two open product databases, and from community submissions that a reviewer checked against label photos. Each product page shows its source and when the data was last updated.</p>
+        </details>
+        <details>
+          <summary>What if my product isn't found?</summary>
+          <p>You can add it: photograph the front, the ingredients and the nutrition table, and type what the label says. A reviewer checks it against your photos before anyone else sees it. Spotted a mistake on a product? Use Report a problem on its page.</p>
+        </details>
+        <details>
+          <summary>Why doesn't baby food or salt have a score?</summary>
+          <p>Some products aren't everyday foods to compare: baby food and infant formula, supplements, alcoholic drinks, and basics like salt, spices, plain tea, coffee and water. SafePick explains this on the page instead of showing a number that wouldn't mean much.</p>
+        </details>
+        <details>
+          <summary>Does it work without a signal?</summary>
+          <p>Products you've already opened are saved on your phone. With no signal, SafePick shows the saved copy and the date it was saved. A product you've never opened needs a connection the first time.</p>
+        </details>
+        <details>
+          <summary>Is it on iPhone and Android?</summary>
+          <p>Yes, SafePick is made for both, from the same app.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOWNLOAD ===================== -->
+  <section class="download" id="download">
+    <div class="wrap download-grid">
+      <div>
+        <svg class="dl-mark" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><use href="#logo-mark"/></svg>
+        <h2 class="display-2">Scan your next shop.</h2>
+        <p>Free to download. No account needed to start.</p>
+      </div>
+      <div class="store-row">
+        <a class="store-btn on-dark" data-store="appStore" href="#download">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="store-btn on-dark" data-store="googlePlay" href="#download">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#top" aria-label="SafePick home">
+        <svg class="brand-lockup" viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg>
+      </a>
+      <p class="tagline">Scan. Know. Compare. Buy Better.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#scores">How scores work</a>
+      <a href="#premium">Premium</a>
+      <a href="#faq">FAQ</a>
+      <a data-link="privacy" href="#privacy">Privacy policy</a>
+      <a data-link="terms" href="#premium">Terms</a>
+      <a data-link="contact" href="#faq">Contact</a>
+    </nav>
+    <div class="footer-fine">
+      <p>SafePick does not provide medical advice. Scores are general information and never replace the package label or advice from your doctor.</p>
+      <p>Product data from <a href="https://world.openfoodfacts.org" rel="noopener" target="_blank">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" rel="noopener" target="_blank">Open Beauty Facts</a>, available under the Open Database License.</p>
+      <p>© <span id="year">2026</span> SafePick</p>
+    </div>
+  </div>
+</footer>
+<!-- SAFEPICK-BODY-END -->
+<script src="main.js"></script>
+</body>
+</html>
