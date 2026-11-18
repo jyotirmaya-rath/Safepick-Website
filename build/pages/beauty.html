@@ -1,0 +1,60 @@
+
+  <section class="page-head">
+    <div class="wrap page-head-solo">
+      <div class="page-head-copy">
+        <p class="eyebrow">Beauty and personal care</p>
+        <h1>Skincare, makeup and haircare, read from the ingredient list.</h1>
+        <p class="lede">Scan a serum, a sunscreen or a shampoo the same way you scan food. SafePick reads the ingredient list on the pack and shows what's in it and what isn't.</p>
+      </div>
+    </div>
+  </section>
+
+<!--tabs: What a scan shows=what-you-see | What you can scan=categories | What a flag means=limits -->
+  <section class="section" id="what-you-see">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="A SafePick product page for a face serum: score 74 out of 100, Good, with an ingredient checklist, key ingredients and skin match">
+        {{> phone-beauty}}
+      </div>
+      <div class="split-copy">
+        <h2>What a beauty scan shows.</h2>
+        <ul class="points">
+          <li><b>Listed or not listed.</b> A quick checklist for parabens, sulfates, fragrance, mineral oil and drying alcohol. SafePick says "not listed", never "free from": it reports what the label declares, nothing more.</li>
+          <li><b>Key ingredients.</b> The ones doing the work, such as glycerin, niacinamide or sodium hyaluronate, pulled out of a long list.</li>
+          <li><b>Skin match.</b> How the formula suits oily, dry, sensitive and acne-prone skin, side by side.</li>
+          <li><b>A score and a verdict.</b> The same Good, Okay or Avoid you see on food, worked out from the ingredient list only. No usable ingredient list means no score.</li>
+          <li><b>Well-rated options.</b> Similar products with better-rated formulas, when there are some.</li>
+        </ul>
+        <p class="note">Have your own list of ingredients to avoid? Save it once and products that contain them are marked for you. <a href="{{root}}for-you/#preferences">Set your preferences</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>From the bathroom shelf to the makeup bag.</h2>
+        <p class="body-lg">Browse these categories in the app, or scan whatever is in your hand.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="Beauty and personal-care categories">
+        <ul class="shelf carousel-track" data-track style="--per-lg:9;--per-md:6;--per-sm:3.4;--gap:0px">
+        {{> shelf-beauty}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="limits">
+    <div class="wrap two-col">
+      <div class="stack">
+        <h2>A flag means "take a second look".</h2>
+        <p class="body-lg">It isn't proof of harm. An ingredient list is a list, and there is a lot it can't tell anyone.</p>
+      </div>
+      <ul class="points">
+        <li><b>It doesn't show amounts.</b> A trace and a main ingredient look the same on a label.</li>
+        <li><b>It doesn't show how a product is made</b> or how and where on the body it is used.</li>
+        <li><b>It can't predict your skin.</b> Patch-test new products, and stop using anything that bothers you.</li>
+        <li><b>It isn't a dermatologist.</b> For a skin condition, ask a doctor or pharmacist what suits you.</li>
+      </ul>
+    </div>
+  </section>
+<!--/tabs-->

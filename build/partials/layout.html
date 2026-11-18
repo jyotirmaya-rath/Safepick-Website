@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="theme-color" content="#F5F8F6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D1512" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SafePick">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{desc}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site_url}}/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{root}}favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="{{root}}assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="{{root}}assets/img/icon-180.png">
+  <link rel="manifest" href="{{root}}site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&amp;family=Instrument+Sans:wght@400..700&amp;family=Red+Hat+Mono:wght@400..600&amp;display=swap">
+  <link rel="stylesheet" href="{{root}}assets/css/styles.css">
+  <script>document.documentElement.className += ' js';</script>
+{{schema}}</head>
+<body class="{{body_class}}">
+{{> sprite}}
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="{{home}}" aria-label="SafePick home">
+      <svg class="brand-lockup" viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+{{nav}}
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-small btn-ink" href="#download">Get the app</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{{body}}
+</main>
+
+<section class="download" id="download" aria-labelledby="download-title">
+  <div class="wrap download-grid">
+    <div>
+      <svg class="dl-mark" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><use href="#logo-mark"/></svg>
+      <h2 class="display-2" id="download-title">Scan your next shop.</h2>
+      <p data-when="soon">SafePick is launching soon on iPhone and Android, starting in Canada.</p>
+      <p data-when="live" hidden>Free to download. No account needed to start.</p>
+    </div>
+    <div class="store-row">
+      {{> store-buttons-dark}}
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="{{home}}" aria-label="SafePick home">
+        <svg class="brand-lockup" viewBox="0 0 989.2 240" aria-hidden="true" focusable="false"><use href="#logo-lockup"/></svg>
+      </a>
+      <p class="tagline">Scan. Know. Compare. Buy better.</p>
+      <p class="footer-co">{{company}}<br>{{company_place}}</p>
+    </div>
+    <nav class="footer-col" aria-label="Product">
+      <h2>Product</h2>
+      <a href="{{root}}features/">Features</a>
+      <a href="{{root}}for-you/">Allergy and diet checks</a>
+      <a href="{{root}}beauty/">Beauty and personal care</a>
+      <a href="{{root}}how-scores-work/">How scores work</a>
+      <a href="{{root}}plans/">Plans</a>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h2>Company</h2>
+      <a href="{{root}}about/">About SafePick</a>
+      <a href="{{root}}founders/">Founders</a>
+      <a href="{{root}}business/">For business</a>
+      <a href="{{root}}blog/">Blog</a>
+      <a href="{{root}}support/">Support and contact</a>
+    </nav>
+    <nav class="footer-col" aria-label="Legal">
+      <h2>Legal</h2>
+      <a href="{{root}}privacy/">Privacy policy</a>
+      <a href="{{root}}terms/">Terms of use</a>
+      <a href="{{root}}delete-account/">Delete your account</a>
+      <a href="{{root}}terms/#stores">Affiliate disclosure</a>
+    </nav>
+    <div class="footer-fine">
+      <p>SafePick does not provide medical advice. Scores are general information and never replace the package label or advice from your doctor.</p>
+      <p>Product data from <a href="https://world.openfoodfacts.org" rel="noopener" target="_blank">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" rel="noopener" target="_blank">Open Beauty Facts</a>, available under the Open Database License. As an Amazon Associate, SafePick earns from qualifying purchases.</p>
+      <p>© {{year}} {{company}}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{root}}assets/js/site.js"></script>
+</body>
+</html>

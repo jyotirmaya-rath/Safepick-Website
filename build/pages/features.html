@@ -1,0 +1,189 @@
+
+  <section class="page-head">
+    <div class="wrap page-head-solo">
+      <div class="page-head-copy">
+        <p class="eyebrow">Features</p>
+        <h1>Everything SafePick does when you point it at a pack.</h1>
+        <p class="lede">A fast scanner, a clear verdict, better choices from the same shelf, and the small tools that make the next shop easier.</p>
+      </div>
+    </div>
+  </section>
+
+<!--tabs: The scanner=scanner | The product page=product-page | Better choices=better-choices | Explore and history=explore | Everyday tools=tools | What you can scan=what-you-can-scan -->
+  <!-- ===================== SCANNER ===================== -->
+  <section class="section section-tint" id="scanner">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="The SafePick scanner reading the barcode on a pack of cookies and showing a quick result">
+        {{> phone-scan}}
+      </div>
+      <div class="split-copy">
+        <h2>A scanner that answers on the spot.</h2>
+        <p class="body-lg">Point the camera at the barcode. The result appears on the scanner itself, so you can keep the pack in your hand and keep moving.</p>
+        <ul class="points">
+          <li><b>Nothing to choose first.</b> SafePick works out whether the pack is food, beauty or personal care from its barcode.</li>
+          <li><b>A quick result.</b> The score, the verdict and the two or three reasons behind it, with "See full details" or "Scan another".</li>
+          <li><b>Scan the whole basket.</b> Every pack you read stays in a strip at the bottom, so you can compare at the end.</li>
+          <li><b>Made for real aisles.</b> A torch for dim shelves, tips when a code won't read, and a box to type the number in.</li>
+          <li><b>Clear when it can't help.</b> "Not found" and "no connection" are told apart, and a missing product can be added in a minute.</li>
+        </ul>
+        <p class="fine">Reads the UPC and EAN barcodes printed on retail packs (UPC-A, UPC-E, EAN-8 and EAN-13).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCT PAGE ===================== -->
+  <section class="section" id="product-page">
+    <div class="wrap split split-rev">
+      <div class="split-copy">
+        <h2>The product page: one clear answer, then the detail.</h2>
+        <p class="body-lg">People scan fast in a store. The page leads with the verdict and folds everything else away until you ask for it.</p>
+        <ul class="points">
+          <li><b>A score with a word and a face.</b> A number out of 100, a colour, a word and a face: Good, Okay or Avoid. Colour is never the only signal.</li>
+          <li><b>Nutrition highlights.</b> Added sugar, saturated fat, fibre and more, each marked Low, Some or High, per 100 g or per serving.</li>
+          <li><b>Approved and Disapproved.</b> The nutrients that help the product and the ones that hold it back.</li>
+          <li><b>Key takeaways.</b> What's good, the main concern, and a sensible next step.</li>
+          <li><b>Declared allergens.</b> Shown as the label declares them, never as "free from".</li>
+        </ul>
+        <p class="note">With Premium the page also opens the full ingredient list, how the score was worked out, the product's data source and checks, and questions about the product. <a href="{{root}}plans/">See plans</a>.</p>
+      </div>
+      <div class="split-media" role="img" aria-label="A SafePick product page for a pack of cookies: score 29 out of 100, Avoid, with nutrition highlights, Approved and Disapproved, and better choices">
+        {{> phone-product}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BETTER CHOICES ===================== -->
+  <section class="section section-tint" id="better-choices">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>Better choices that are really better.</h2>
+        <p class="body-lg">A low score is only useful if you know what to pick instead. SafePick suggests similar products that score higher, each with its own picture and score.</p>
+      </div>
+      <div class="swap" role="img" aria-label="Example: Double Chocolate Cookies score 29, Avoid. Better choices: Oat and Raisin Cookies 58, Whole Wheat Digestives 63, Oat Crisps 72.">
+        <div class="swap-from">
+          <span class="swap-label">You scanned</span>
+          <div class="pcard was"><img src="{{root}}assets/img/cat/biscuits.png" alt="" width="64" height="64"><b>Double Chocolate Cookies</b><span class="tag avoid">29 · Avoid</span></div>
+        </div>
+        <svg class="swap-arrow" aria-hidden="true"><use href="#i-right"/></svg>
+        <div class="swap-to">
+          <span class="swap-label">Better choices</span>
+          <div class="pcard"><img src="{{root}}assets/img/cat/snack-bars.png" alt="" width="64" height="64"><b>Oat &amp; Raisin Cookies</b><span class="tag okay">58 · Okay</span></div>
+          <div class="pcard"><img src="{{root}}assets/img/cat/bread.png" alt="" width="64" height="64"><b>Whole Wheat Digestives</b><span class="tag okay">63 · Okay</span></div>
+          <div class="pcard"><img src="{{root}}assets/img/cat/breakfast-cereals.png" alt="" width="64" height="64"><b>Oat Crisps</b><span class="tag good">72 · Good</span></div>
+        </div>
+      </div>
+      <ul class="points two-col" style="margin-top:36px">
+        <li><b>The same kind of product.</b> Cookies for cookies, shampoo for shampoo. Never a salad instead of a snack.</li>
+        <li><b>Never a step down.</b> An option is only called better when its score really is higher than what you scanned.</li>
+        <li><b>Respects the pack.</b> A vegetarian product never gets a non-vegetarian suggestion.</li>
+        <li><b>Fits you.</b> With your preferences saved, options that match them are marked "Fits your preferences".</li>
+      </ul>
+      <p class="note" style="margin-top:28px">Where store links are available, a button opens the product in the store's own app or site. SafePick shows no prices: you see the price in the store.</p>
+    </div>
+  </section>
+
+  <!-- ===================== EXPLORE AND HISTORY ===================== -->
+  <section class="section" id="explore">
+    <div class="wrap split">
+      <div class="split-media">
+        <div class="phone-pair" role="img" aria-label="The SafePick Explore screen with food categories, and the History screen with scanned products grouped by Today, Yesterday and Earlier">
+          {{> phone-explore}}
+          {{> phone-history}}
+        </div>
+      </div>
+      <div class="split-copy">
+        <h2>Look things up at home. Find them again later.</h2>
+        <p class="body-lg">You don't need the pack in your hand. Search by name, browse a category, or open something you scanned last week.</p>
+        <ul class="points">
+          <li><b>Explore and search.</b> Look a product up by name or brand, or browse food and beauty categories.</li>
+          <li><b>Your scan history.</b> Everything you've scanned, grouped by today, yesterday and earlier, as a list or a grid.</li>
+          <li><b>Recommended for you.</b> Better picks for the products you buy most, based on your scans and your preferences.</li>
+          <li><b>Stays on your phone.</b> History is kept on your device. With Premium it can also follow you to a new phone.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVERYDAY TOOLS ===================== -->
+  <section class="section section-tint" id="tools">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Small things that make the next shop easier.</h2>
+      </div>
+      <div class="carousel" data-carousel data-label="Everyday tools">
+        <div class="tools carousel-track" data-track style="--per-lg:3;--per-md:2;--per-sm:1.12;--gap:12px">
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-offline"/></svg>
+          <h3>Works with a weak signal</h3>
+          <p>Products you've opened are saved on your phone and shown with the date they were saved when the network drops.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-lock"/></svg>
+          <h3>App lock</h3>
+          <p>Ask for Face ID, your fingerprint or your phone passcode each time SafePick opens.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-camera-plus"/></svg>
+          <h3>Add a missing product</h3>
+          <p>Photograph the pack and type the label. A reviewer checks it against your photos before anyone else sees it.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-flag"/></svg>
+          <h3>Report a problem</h3>
+          <p>Spotted a wrong ingredient or an old label? Report it from the product page and a reviewer takes a look.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-globe"/></svg>
+          <h3>Your country, your language</h3>
+          <p>Pick Canada, the USA or India on first launch. English and French in Canada, English and Spanish in the USA.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-bell"/></svg>
+          <h3>Reminders <span class="tag good">Premium</span></h3>
+          <p>A nudge on weekend mornings to scan before you buy, and a reminder when it's time to buy something again.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-list"/></svg>
+          <h3>Lists and favourites <span class="tag good">Premium</span></h3>
+          <p>Save products to Favourites or your own lists and find them again in one tap.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-sync"/></svg>
+          <h3>History on all your devices <span class="tag good">Premium</span></h3>
+          <p>Sign in on a new phone and your scan history is already there.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-spark"/></svg>
+          <h3>No ads, anywhere</h3>
+          <p>Not on the free plan and not on Premium. Nothing on a product page is sponsored.</p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU CAN SCAN ===================== -->
+  <section class="section" id="what-you-can-scan">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>What you can scan.</h2>
+        <p class="body-lg">Packaged food and drink, and beauty and personal-care products. These are the categories you can browse in the app.</p>
+      </div>
+
+      <div class="shelf-title"><h3>Food and drink</h3><p>Scored from the nutrition table and the ingredient list.</p></div>
+      <div class="carousel" data-carousel data-label="Food and drink categories">
+        <ul class="shelf carousel-track" data-track style="--per-lg:10;--per-md:6;--per-sm:3.4;--gap:0px">
+        {{> shelf-food}}
+        </ul>
+      </div>
+
+      <div class="shelf-title"><h3>Beauty and personal care</h3><p>Rated from the ingredient list.</p></div>
+      <div class="carousel" data-carousel data-label="Beauty and personal-care categories">
+        <ul class="shelf carousel-track" data-track style="--per-lg:9;--per-md:6;--per-sm:3.4;--gap:0px">
+        {{> shelf-beauty}}
+        </ul>
+      </div>
+      <p class="note">Some products are shown without a score, such as baby food, supplements, alcohol, and basics like salt and spices. <a href="{{root}}how-scores-work/#not-scored">Why some products aren't scored</a>. Screens on this site show example products for illustration.</p>
+    </div>
+  </section>
+<!--/tabs-->

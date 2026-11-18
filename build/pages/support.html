@@ -1,0 +1,121 @@
+
+  <section class="page-head">
+    <div class="wrap page-head-solo">
+      <div class="page-head-copy">
+        <p class="eyebrow">Support</p>
+        <h1>How can we help?</h1>
+        <p class="lede">Most answers are below. If yours isn't, write to us. A person reads every message.</p>
+      </div>
+    </div>
+  </section>
+
+<!--tabs: Contact us=contact | Questions and answers=faq | Quick fixes in the app=in-the-app -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="carousel" data-carousel data-label="Ways to contact us">
+        <div class="contact-grid sm-carousel" data-track>
+        <article class="contact-card">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <h2>Help with the app</h2>
+          <p>Scanning, scores, your account, Premium or anything that isn't working as it should.</p>
+          <a class="mail" href="mailto:{{email_support}}?subject=SafePick%20support">{{email_support}}</a>
+        </article>
+        <article class="contact-card">
+          <svg aria-hidden="true"><use href="#i-lock"/></svg>
+          <h2>Privacy and your data</h2>
+          <p>Ask what we hold about you, correct it or have it deleted. See also <a href="{{root}}delete-account/">Delete your account</a>.</p>
+          <a class="mail" href="mailto:{{email_privacy}}?subject=Privacy%20request">{{email_privacy}}</a>
+        </article>
+        <article class="contact-card">
+          <svg aria-hidden="true"><use href="#i-building"/></svg>
+          <h2>Business and press</h2>
+          <p>Brands, retailers, data providers and journalists. See <a href="{{root}}business/">For business</a>.</p>
+          <a class="mail" href="mailto:{{email_business}}?subject=Working%20with%20SafePick">{{email_business}}</a>
+        </article>
+      </div>
+      </div>
+      <p class="note" style="margin-top:28px">Writing about a problem? Tell us your phone model, the app version (Settings, About) and, for a product, the barcode number printed under the bars. It saves a round of questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head">
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>When can I download SafePick?</summary>
+          <p>SafePick is launching first in Canada, on iPhone and Android. The download buttons on this site switch on the day it reaches the App Store and Google Play.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. Open the app and start scanning as a guest. An account (Google or Apple) is only needed for Premium, for history on all your devices, and for adding a missing product.</p>
+        </details>
+        <details>
+          <summary>Is SafePick free?</summary>
+          <p>Yes. Everyone can scan 1,000 different products a month and get scores, Approved and Disapproved, allergen alerts, health and diet checks and better choices. Premium is optional. <a href="{{root}}plans/">See plans</a>.</p>
+        </details>
+        <details>
+          <summary>Can SafePick tell me if a product is safe for my allergy?</summary>
+          <p>No app can promise that. SafePick checks the allergies you saved against the ingredient list, the allergen information and the product name, and warns you when it finds a match. When a product has no readable ingredient list, it says the allergen can't be verified. A missing warning never means a product is free of an allergen: always check the label, including "may contain". <a href="{{root}}for-you/#limits">What the allergy check can and can't do</a>.</p>
+        </details>
+        <details>
+          <summary>Where does the product information come from?</summary>
+          <p>From Open Food Facts and Open Beauty Facts, two open product databases, and from community and brand submissions that a reviewer checked against label photos. Each product page shows its source and when the data was last updated. <a href="{{root}}how-scores-work/#data">More about the data</a>.</p>
+        </details>
+        <details>
+          <summary>I think a score is wrong. What can I do?</summary>
+          <p>Scores come from the data on file, so first check the nutrition values and ingredients on the product page against the pack. If they differ, use "Report a problem". If the data is right and you disagree with the result, tell us at <a href="mailto:{{email_support}}">{{email_support}}</a>.</p>
+        </details>
+        <details>
+          <summary>Why doesn't baby food or salt have a score?</summary>
+          <p>Some products aren't everyday foods to compare: baby food and infant formula, supplements, alcoholic drinks, and basics like salt, spices, plain tea, coffee and water. SafePick explains this on the page instead of showing a number that wouldn't mean much.</p>
+        </details>
+        <details>
+          <summary>Does it work without a signal?</summary>
+          <p>Products you've already opened are saved on your phone. With no signal, SafePick shows the saved copy and the date it was saved. A product you've never opened needs a connection the first time.</p>
+        </details>
+        <details>
+          <summary>Which countries and languages does it support?</summary>
+          <p>Canada (English and French), the United States (English and Spanish) and India (English). You choose your country the first time you open the app and can change it in Settings.</p>
+        </details>
+        <details>
+          <summary>How do I cancel Premium?</summary>
+          <p>In your App Store or Google Play subscriptions, not in SafePick. <a href="{{root}}plans/#billing">Step-by-step</a>.</p>
+        </details>
+        <details>
+          <summary>I own a brand. How do I correct my product?</summary>
+          <p>Send the barcode and clear photos of the label to <a href="mailto:{{email_business}}">{{email_business}}</a>. It's free. <a href="{{root}}business/#brands">How it works for brands</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="in-the-app">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>Often quicker in the app.</h2>
+      </div>
+      <div class="carousel" data-carousel data-label="Quick fixes in the app">
+        <div class="tools sm-carousel" data-track>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-flag"/></svg>
+          <h3>A product detail is wrong</h3>
+          <p>Open the product and tap "Report a problem". A reviewer checks it against the label.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-camera-plus"/></svg>
+          <h3>A product is missing</h3>
+          <p>Tap "Add this product", photograph the front, the ingredients and the nutrition table, and type what the label says.</p>
+        </article>
+        <article class="tool">
+          <svg class="tool-ic" aria-hidden="true"><use href="#i-trash"/></svg>
+          <h3>Delete your account</h3>
+          <p>Settings, Account &amp; security, Delete my account. <a href="{{root}}delete-account/">What gets deleted</a>.</p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+<!--/tabs-->

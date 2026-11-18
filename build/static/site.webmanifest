@@ -1,0 +1,21 @@
+{
+  "name": "SafePick",
+  "short_name": "SafePick",
+  "description": "Scan food and beauty barcodes before you buy.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F5F8F6",
+  "theme_color": "#245B4A",
+  "icons": [
+    {
+      "src": "/assets/img/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

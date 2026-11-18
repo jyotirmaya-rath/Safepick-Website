@@ -1,0 +1,22 @@
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{site_url}}/#org",
+        "name": "{{company}}",
+        "url": "{{site_url}}/",
+        "logo": "{{site_url}}/assets/img/icon-512.png",
+        "email": "{{email_support}}",
+        "address": { "@type": "PostalAddress", "addressRegion": "BC", "addressCountry": "CA" }
+      },
+      {
+        "@type": "WebSite",
+        "name": "SafePick",
+        "url": "{{site_url}}/",
+        "publisher": { "@id": "{{site_url}}/#org" }
+      }
+    ]
+  }
+  </script>
