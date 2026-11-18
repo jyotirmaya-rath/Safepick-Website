@@ -5,7 +5,7 @@
  */
 const SITE_LINKS = {
   appStore: '',      // e.g. 'https://apps.apple.com/ca/app/safepick/id0000000000'
-  googlePlay: '',    // e.g. 'https://play.google.com/store/apps/details?id=com.jyo.nutriscan'
+  googlePlay: '',    // e.g. 'https://play.google.com/store/apps/details?id=com.safepick.app'
   privacy: '',       // the hosted privacy policy page
   terms: '',         // the hosted terms page
   contactEmail: '',  // e.g. 'hello@safepick.app'
