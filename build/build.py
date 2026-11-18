@@ -21,7 +21,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE.parent / "site"
 
 CONFIG = {
-    "site_url": "https://safepick.app",
+    "site_url": "https://www.safepick.app",
     "company": "SafePick Corporation",
     "company_place": "British Columbia, Canada",
     "email_support": "support@safepick.app",
@@ -402,7 +402,7 @@ def main():
     (OUT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {CONFIG['site_url']}/sitemap.xml\n", encoding="utf-8"
     )
-    (OUT / "CNAME").write_text("safepick.app\n", encoding="utf-8")
+    (OUT / "CNAME").write_text(CONFIG["site_url"].split("://", 1)[1] + "\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
     problems = check(OUT)
