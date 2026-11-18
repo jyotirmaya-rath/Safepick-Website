@@ -1,0 +1,274 @@
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Food, beauty and personal care</p>
+        <h1 class="display">Know what's inside <span class="nowrap">before you buy.</span></h1>
+        <p class="lede">Scan the barcode on any packaged food or beauty product. In seconds SafePick shows a clear score, what's Approved and Disapproved, and better choices on the same shelf.</p>
+        <div class="store-row">
+          {{> store-buttons}}
+        </div>
+        <ul class="hero-facts" aria-label="At a glance">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No account needed to scan</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>1,000 free scans a month</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage">
+        <div class="carousel carousel-phones" data-carousel data-autoplay="4500" data-label="SafePick app screens">
+          <div class="carousel-track" data-track style="--per-lg:1;--per-md:1;--per-sm:1;--gap:0px">
+            <div class="slide">
+              <div role="img" aria-label="The SafePick scanner reading the barcode on a pack of cookies and showing a quick result">
+        {{> phone-scan}}
+              </div>
+              <p class="slide-cap">Scan the barcode</p>
+            </div>
+            <div class="slide">
+              <div role="img" aria-label="A SafePick product page for cookies: score 29 out of 100, Avoid, with nutrition highlights and better choices">
+        {{> phone-product}}
+              </div>
+              <p class="slide-cap">Read the verdict</p>
+            </div>
+            <div class="slide">
+              <div role="img" aria-label="A SafePick product page for peanut butter with a red alert: peanut allergen detected">
+        {{> phone-foryou}}
+              </div>
+              <p class="slide-cap">Checked against your allergies</p>
+            </div>
+            <div class="slide">
+              <div role="img" aria-label="A SafePick product page for a face serum: score 74 out of 100, Good, with an ingredient checklist">
+        {{> phone-beauty}}
+              </div>
+              <p class="slide-cap">Beauty and personal care too</p>
+            </div>
+            <div class="slide">
+              <div role="img" aria-label="The SafePick Explore screen with a search box and food categories">
+        {{> phone-explore}}
+              </div>
+              <p class="slide-cap">Search and browse at home</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stat-strip">
+        <div><dt>Products</dt><dd>1M+</dd><p>sold in Canada, the USA and India</p></div>
+        <div><dt>Ads</dt><dd>0</dd><p>none in the app, ever</p></div>
+        <div><dt>Verdicts</dt><dd>3</dd><p>Good, Okay or Avoid, at a glance</p></div>
+        <div><dt>Free scans</dt><dd>1,000</dd><p>different products every month</p></div>
+      </dl>
+    </div>
+  </section>
+
+<!--tabs: How it works=how | The verdict=verdict | For you=for-you | Beauty=beauty | What it scans=shelf | No ads=trust | Where it works=countries | The company=company -->
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Scan, read, choose. In the aisle.</h2>
+      </div>
+      <div class="carousel" data-carousel data-label="How it works">
+      <ol class="steps sm-carousel" data-track>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">1</span>
+          <h3>Scan any barcode</h3>
+          <p>Point your camera at the pack. SafePick works out whether it's food, beauty or personal care, so there's nothing to choose first.</p>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">2</span>
+          <h3>See the verdict</h3>
+          <p>A score out of 100 with one word, Good, Okay or Avoid, and the two or three reasons behind it, right on the scanner.</p>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">3</span>
+          <h3>Pick something better</h3>
+          <p>Similar products from the same shelf that score higher, each with its own picture and score, so you can compare before it goes in the cart.</p>
+        </li>
+      </ol>
+      </div>
+      <p class="more-row" style="margin-top:22px"><a class="more" href="{{root}}features/">See every feature<svg aria-hidden="true"><use href="#i-right"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== THE PRODUCT PAGE ===================== -->
+  <section class="section section-tint" id="verdict">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="A SafePick product page for a pack of cookies: score 29 out of 100, Avoid, with nutrition highlights and better choices">
+        {{> phone-product}}
+      </div>
+      <div class="split-copy">
+        <h2>One clear answer first. Details when you want them.</h2>
+        <p class="body-lg">People scan fast in a store, so the page leads with what you need and folds the rest away.</p>
+        <ul class="points">
+          <li><b>A score with a word and a face.</b> Every score shows a number, a colour, a word and a face, so colour is never the only signal.</li>
+          <li><b>Approved and Disapproved.</b> The nutrients that help and the ones that hold a product back, per 100 g or per serving.</li>
+          <li><b>Better choices that are really better.</b> Options come from the same kind of product and never score lower than what you scanned.</li>
+        </ul>
+        {{> bands}}
+        <p class="more-row"><a class="more" href="{{root}}how-scores-work/">How scores are worked out<svg aria-hidden="true"><use href="#i-right"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOR YOU ===================== -->
+  <section class="section" id="for-you">
+    <div class="wrap split split-rev">
+      <div class="split-copy">
+        <h2>Tell it what matters. Every scan checks it for you.</h2>
+        <p class="body-lg">Add allergies, a diet or health goals once. From then on each result also says how the product fits you. It's optional, and free for everyone.</p>
+        <ul class="allergen-row" aria-label="Allergens SafePick can check">
+          <li><img src="{{root}}assets/img/allergen/peanut.png" alt="" width="28" height="28">Peanut</li>
+          <li><img src="{{root}}assets/img/allergen/treeNut.png" alt="" width="28" height="28">Tree nuts</li>
+          <li><img src="{{root}}assets/img/allergen/milk.png" alt="" width="28" height="28">Milk</li>
+          <li><img src="{{root}}assets/img/allergen/egg.png" alt="" width="28" height="28">Egg</li>
+          <li><img src="{{root}}assets/img/allergen/wheat.png" alt="" width="28" height="28">Wheat</li>
+          <li><img src="{{root}}assets/img/allergen/soy.png" alt="" width="28" height="28">Soy</li>
+          <li><img src="{{root}}assets/img/allergen/sesame.png" alt="" width="28" height="28">Sesame</li>
+          <li><img src="{{root}}assets/img/allergen/fish.png" alt="" width="28" height="28">Fish</li>
+          <li><img src="{{root}}assets/img/allergen/crustacean.png" alt="" width="28" height="28">Crustaceans</li>
+          <li><img src="{{root}}assets/img/allergen/mustard.png" alt="" width="28" height="28">Mustard</li>
+          <li><img src="{{root}}assets/img/allergen/sulphites.png" alt="" width="28" height="28">Sulphites</li>
+        </ul>
+        <p class="note">Your choices stay on your phone unless you switch on "Keep on my account". SafePick is not a medical service: it can't guarantee a product is free of an allergen, so always read the pack.</p>
+        <p class="more-row"><a class="more" href="{{root}}for-you/">Allergy, diet and health checks<svg aria-hidden="true"><use href="#i-right"/></svg></a></p>
+      </div>
+      <div class="split-media" role="img" aria-label="A SafePick product page for peanut butter with a red alert: peanut allergen detected, matching the allergy saved in your profile">
+        {{> phone-foryou}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BEAUTY ===================== -->
+  <section class="section section-tint" id="beauty">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="A SafePick product page for a face serum: score 74 out of 100, Good, with an ingredient checklist and skin match">
+        {{> phone-beauty}}
+      </div>
+      <div class="split-copy">
+        <h2>Skincare, makeup and haircare, read from the ingredient list.</h2>
+        <p class="body-lg">Scan a serum, a sunscreen or a shampoo the same way you scan food. SafePick reads the ingredient list and shows what's in it and what isn't.</p>
+        <ul class="points">
+          <li><b>Listed or not listed.</b> A quick checklist for parabens, sulfates, fragrance, mineral oil and drying alcohol.</li>
+          <li><b>Skin match.</b> How the formula suits oily, dry, sensitive and acne-prone skin.</li>
+        </ul>
+        <p class="more-row"><a class="more" href="{{root}}beauty/">Beauty and personal care<svg aria-hidden="true"><use href="#i-right"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHELF ===================== -->
+  <section class="section" id="shelf">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From breakfast cereal to sunscreen.</h2>
+        <p class="body-lg">One scanner for the whole shop. SafePick knows more than a million products sold in Canada, the USA and India.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="Examples of what you can scan">
+        <ul class="shelf carousel-track" data-track style="--per-lg:12;--per-md:6;--per-sm:3.4;--gap:0px">
+        {{> shelf-food}}
+        {{> shelf-beauty}}
+        </ul>
+      </div>
+      <p class="more-row"><a class="more" href="{{root}}features/#what-you-can-scan">Everything you can scan<svg aria-hidden="true"><use href="#i-right"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST ===================== -->
+  <section class="section section-tint" id="trust">
+    <div class="wrap split split-privacy">
+      {{> facts-panel}}
+      <div class="split-copy">
+        <h2>No ads. No tracking. Free to scan.</h2>
+        <p class="body-lg">SafePick shows no advertising and doesn't track you across other apps or websites. Your data is never sold.</p>
+        <ul class="points">
+          <li><b>Start as a guest.</b> Scanning never needs an account. Your scans stay on your phone.</li>
+          <li><b>Scores can't be bought.</b> No brand or store can pay to change a score, a ranking or the better-choices list.</li>
+          <li><b>How SafePick earns.</b> Premium, and commissions from some store links at no extra cost to you.</li>
+        </ul>
+        <p class="more-row">
+          <a class="more" href="{{root}}about/">About the company<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+          <a class="more" href="{{root}}privacy/">Privacy policy<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTRIES ===================== -->
+  <section class="section" id="countries">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Made for Canada. Ready for the USA and India.</h2>
+        <p class="body-lg">Choose your country the first time you open SafePick. It shows products and stores for where you shop, and you can change it any time in Settings.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="Countries">
+        <div class="countries sm-carousel" data-track>
+        <article class="country country-first">
+          <p class="country-tag">Launching first</p>
+          <h3>Canada</h3>
+          <p class="country-num"><b>125,000+</b> foods sold in Canada</p>
+          <p class="country-stores">In English and French, with scores, allergen alerts and better choices for what's on Canadian shelves.</p>
+        </article>
+        <article class="country">
+          <p class="country-tag">Supported</p>
+          <h3>United States</h3>
+          <p class="country-num"><b>935,000+</b> foods sold in the USA</p>
+          <p class="country-stores">In English and Spanish. The largest catalogue in the app, from the same open databases.</p>
+        </article>
+        <article class="country">
+          <p class="country-tag">Supported</p>
+          <h3>India</h3>
+          <p class="country-num"><b>21,000+</b> foods sold in India</p>
+          <p class="country-stores">One-tap store links: Blinkit, Zepto, Swiggy Instamart, BigBasket, Flipkart, JioMart, Amazon.in and Nykaa.</p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPANY ===================== -->
+  <section class="section" id="company">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Built by SafePick Corporation, in British Columbia.</h2>
+        <p class="body-lg">An independent Canadian company. We work with brands, retailers and data providers on one condition: the score stays independent.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="The company">
+        <div class="teasers sm-carousel" data-track>
+        <article class="teaser">
+          <svg class="teaser-ic" aria-hidden="true"><use href="#i-tag"/></svg>
+          <h3>Brands</h3>
+          <p>See how your products appear, correct a detail or send us your label data. It's free, and it never buys a better score.</p>
+          <a class="more" href="{{root}}business/#brands">For brands<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+        </article>
+        <article class="teaser">
+          <svg class="teaser-ic" aria-hidden="true"><use href="#i-store"/></svg>
+          <h3>Retailers and data partners</h3>
+          <p>Connect your store to SafePick's product pages, or talk to us about licensed product data.</p>
+          <a class="more" href="{{root}}business/">For business<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+        </article>
+        <article class="teaser">
+          <svg class="teaser-ic" aria-hidden="true"><use href="#i-users"/></svg>
+          <h3>The people behind it</h3>
+          <p>SafePick was founded by Jyotirmaya Rath and Phani Komi, a software builder and a food-business owner.</p>
+          <a class="more" href="{{root}}founders/">Meet the founders<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+<!--/tabs-->
+
+  <!-- ===================== BLOG ===================== -->
+  <section class="section section-tint" id="blog">
+    <div class="wrap">
+      <div class="section-head row">
+        <h2>From the blog.</h2>
+        <a class="more" href="{{root}}blog/">All articles<svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+      {{blog_carousel}}
+    </div>
+  </section>

@@ -1,0 +1,132 @@
+
+  <section class="page-head">
+    <div class="wrap page-head-solo">
+      <div class="page-head-copy">
+        <p class="eyebrow">For you</p>
+        <h1>Your allergies, your diet, checked on every scan.</h1>
+        <p class="lede">Tell SafePick what matters to you once. From then on, every result also says how the product fits you. It's optional, free on every plan, and kept on your phone.</p>
+      </div>
+    </div>
+  </section>
+
+<!--tabs: On every scan=alerts | What you can tell it=preferences | What it can't do=limits | Your privacy=private -->
+  <!-- ===================== ON THE PRODUCT PAGE ===================== -->
+  <section class="section" id="alerts">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="A SafePick product page for peanut butter with a red alert: peanut allergen detected, matching the allergy saved in your profile">
+        {{> phone-foryou}}
+      </div>
+      <div class="split-copy">
+        <h2>The warning comes before the score.</h2>
+        <p class="body-lg">A product can score well and still be wrong for you. So when a scan matches something you saved, SafePick says so at the top of the page.</p>
+        <ul class="points">
+          <li><b>Red for an allergy.</b> A clear alert that names the allergen and tells you to avoid the product.</li>
+          <li><b>Amber for an intolerance or a goal.</b> A notice, not an alarm: "Not the best choice for you".</li>
+          <li><b>Your numbers, pulled out.</b> Watching sugar or sodium? The amount is shown with Low, Moderate or High beside it.</li>
+          <li><b>Better choices for you.</b> Suggestions that match your preferences are marked "Fits your preferences".</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU CAN SAVE ===================== -->
+  <section class="section" id="preferences">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>What you can tell it.</h2>
+        <p class="body-lg">Five short lists. Fill in one, all or none.</p>
+      </div>
+      <div class="stack-lg">
+        <div class="pref-group">
+          <h3>Allergies and intolerances</h3>
+          <p>Choose Allergy or Intolerance for each. Allergies get the strongest warning. You can add any other allergen by name.</p>
+          <ul class="allergen-row">
+            <li><img src="{{root}}assets/img/allergen/peanut.png" alt="" width="28" height="28">Peanuts</li>
+            <li><img src="{{root}}assets/img/allergen/treeNut.png" alt="" width="28" height="28">Tree nuts</li>
+            <li><img src="{{root}}assets/img/allergen/milk.png" alt="" width="28" height="28">Milk</li>
+            <li><img src="{{root}}assets/img/allergen/egg.png" alt="" width="28" height="28">Eggs</li>
+            <li><img src="{{root}}assets/img/allergen/wheat.png" alt="" width="28" height="28">Wheat</li>
+            <li><img src="{{root}}assets/img/allergen/soy.png" alt="" width="28" height="28">Soy</li>
+            <li><img src="{{root}}assets/img/allergen/sesame.png" alt="" width="28" height="28">Sesame</li>
+            <li><img src="{{root}}assets/img/allergen/fish.png" alt="" width="28" height="28">Fish</li>
+            <li><img src="{{root}}assets/img/allergen/crustacean.png" alt="" width="28" height="28">Crustacean shellfish</li>
+            <li><img src="{{root}}assets/img/allergen/mustard.png" alt="" width="28" height="28">Mustard</li>
+            <li><img src="{{root}}assets/img/allergen/sulphites.png" alt="" width="28" height="28">Sulphites</li>
+          </ul>
+        </div>
+        <div class="pref-cols">
+          <div class="pref-group">
+            <h3>Health-related needs</h3>
+            <p>Used only to highlight amounts on the label.</p>
+            <ul class="chips"><li>Watch sugar</li><li>Lower sodium</li><li>Lower saturated fat</li><li>Weight management</li><li>Kidney-conscious</li></ul>
+          </div>
+          <div class="pref-group">
+            <h3>Diet and lifestyle</h3>
+            <p>Products that don't fit are marked clearly, even with a good score.</p>
+            <ul class="chips"><li>Vegetarian</li><li>Vegan</li><li>Jain</li><li>Gluten-free</li><li>Lactose-free</li></ul>
+          </div>
+          <div class="pref-group">
+            <h3>Goals</h3>
+            <p>Nice to have. A product that misses a goal gets an amber note, never a red warning.</p>
+            <ul class="chips"><li>Lower added sugar</li><li>Lower sodium</li><li>Higher fibre</li></ul>
+          </div>
+          <div class="pref-group">
+            <h3>Ingredients to avoid</h3>
+            <p>Your own list, for food and for beauty and personal care. This is a preference, not an allergy check.</p>
+            <ul class="chips"><li>In food</li><li>In beauty and personal care</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIMITS ===================== -->
+  <section class="section" id="limits">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>What the allergy check can and can't do.</h2>
+        <p class="body-lg">No app can promise a product is safe for your allergy. Here is exactly what SafePick does, so you know how far to trust it.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="What the allergy check can and cannot do">
+        <div class="method-grid sm-carousel" data-track>
+        <article>
+          <h3>What it checks</h3>
+          <p>The allergies and intolerances you saved, against the product's ingredient list, its allergen information and its name.</p>
+        </article>
+        <article>
+          <h3>When it can't verify</h3>
+          <p>If a product has no readable ingredient list, or only part of one, SafePick says the allergen can't be verified instead of staying silent.</p>
+        </article>
+        <article>
+          <h3>A missing warning is not a green light</h3>
+          <p>Product data can be incomplete or out of date. No warning never means a product is free of an allergen. Always check the pack, including "may contain".</p>
+        </article>
+        <article>
+          <h3>Diet checks are preferences</h3>
+          <p>Gluten-free and lactose-free are preference checks, not a coeliac-safe or allergy-safe guarantee.</p>
+        </article>
+      </div>
+      </div>
+      <p class="notice" style="margin-top:32px"><b>Not medical advice.</b> SafePick is an information tool. It can't know your health, your medicines or your diet, and it never replaces the package label or advice from your doctor, dietitian or pharmacist.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PRIVACY ===================== -->
+  <section class="section" id="private">
+    <div class="wrap split">
+      <div class="split-media" role="img" aria-label="The SafePick preferences screen: peanuts set as an allergy, milk as an intolerance, and the Keep on my account switch turned off">
+        {{> phone-prefs}}
+      </div>
+      <div class="split-copy">
+        <h2>Health choices are personal. They stay with you.</h2>
+        <p class="body-lg">What you save here is some of the most personal information in the app, so it gets the strictest treatment.</p>
+      <ul class="points">
+        <li><b>On your phone by default.</b> Your choices are kept in your phone's secure storage and never leave it unless you say so.</li>
+        <li><b>"Keep on my account" is your call.</b> Switch it on to copy your choices to your account so they appear on your other phones. Only you can see them.</li>
+        <li><b>Off means deleted.</b> Switching it off deletes the copy on your account. Your phone keeps its own.</li>
+        <li><b>Never used for ads or analytics.</b> Not shared with brands, stores or anyone else.</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+<!--/tabs-->

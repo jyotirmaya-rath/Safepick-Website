@@ -1,0 +1,116 @@
+
+  <section class="page-head">
+    <div class="wrap page-head-solo">
+      <div class="page-head-copy">
+        <p class="eyebrow">How scores work</p>
+        <h1>Honest about what a score can and can't tell you.</h1>
+        <p class="lede">SafePick reads what is printed on a pack and turns it into a score out of 100 using published rules. Here are the rules, the data behind them, and where a score stops being useful.</p>
+      </div>
+    </div>
+  </section>
+
+<!--tabs: The three verdicts=bands | What goes into a score=method | Where the data comes from=data -->
+  <section class="section" id="bands">
+    <div class="wrap split">
+      <div class="split-media">
+        <div class="verdicts" role="img" aria-label="Three example verdicts: 74 out of 100, Good. 61 out of 100, Okay. 29 out of 100, Avoid.">
+          <div class="score-card good">
+            <div class="ring" style="--v:74;--c:#16A34A"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span>74<small>/100</small></span></div>
+            <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-good"/></svg>Good</span><em>Good overall</em></div>
+          </div>
+          <div class="score-card okay">
+            <div class="ring" style="--v:61;--c:#F59E0B"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span>61<small>/100</small></span></div>
+            <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-okay"/></svg>Okay</span><em>Some concerns to be aware of</em></div>
+          </div>
+          <div class="score-card avoid">
+            <div class="ring" style="--v:29;--c:#EF4444"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" pathLength="100"/><circle class="ring-val" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span>29<small>/100</small></span></div>
+            <div class="sc-word"><span><svg aria-hidden="true"><use href="#face-avoid"/></svg>Avoid</span><em>Several concerns</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-copy">
+        <h2>One number, three verdicts.</h2>
+        <p class="body-lg">Every scored product gets a number from 0 to 100 and one of three words. The same bands are used on every screen of the app.</p>
+        {{> bands}}
+        <ul class="points">
+          <li><b>Good, 70 to 100.</b> The label shows little to worry about for this kind of product.</li>
+          <li><b>Okay, 50 to 69.</b> Some concerns to be aware of.</li>
+          <li><b>Avoid, 0 to 49.</b> Several concerns. Look at the better choices.</li>
+          <li><b>Never colour alone.</b> Each verdict has a number, a colour, a word and a face, so it reads the same for everyone.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METHOD ===================== -->
+  <section class="section" id="method">
+    <div class="wrap method">
+      <div class="method-lead">
+        <h2>What goes into a food score.</h2>
+        <p class="body-lg">Food and drink scores compare what the label declares, per 100 g or 100 ml, with reference ranges and a few category adjustments.</p>
+        <ul class="nutrient-list" aria-label="What a food score reads">
+          <li>Energy</li><li>Added sugar</li><li>Total sugar</li><li>Saturated fat</li><li>Trans fat</li><li>Sodium</li><li>Protein</li><li>Fibre</li><li>Ingredient list</li>
+        </ul>
+        <p>Drinks are judged without protein and fibre, because a drink isn't expected to supply them. Beauty and personal-care scores use the ingredient list only.</p>
+        <p>The wording always describes the label, like "high in sodium per 100 g". It never says what a food will do to you.</p>
+      </div>
+      <div class="carousel" data-carousel data-label="Rules for scores">
+        <div class="method-grid sm-carousel" data-track>
+        <article>
+          <h3>Missing data is never guessed</h3>
+          <p>Nutrients a pack doesn't declare are left out and shown as "Not on label". With too little data there is no number at all, and partial data caps the score at 59, so it can't read Good.</p>
+        </article>
+        <article id="not-scored">
+          <h3>Some products aren't scored</h3>
+          <p>Baby food and infant formula, supplements, alcoholic drinks, and basics like salt, spices, plain tea, coffee and water. The page says why instead of showing a number that wouldn't mean much.</p>
+        </article>
+        <article>
+          <h3>"Why this score?" on every product</h3>
+          <p>The nutrient and ingredient flags, the positives, the version of the method, the data source and the date the data was last updated.</p>
+        </article>
+        <article>
+          <h3>Scores can't be bought</h3>
+          <p>No brand, store or partner can pay to change a score, a ranking or the better-choices list. Store links are added after the score, never before.</p>
+        </article>
+        <article>
+          <h3>A barcode proves identity, not the pack</h3>
+          <p>A recognised barcode confirms which product this is in our data. It can't confirm that the pack in your hand is genuine or in date.</p>
+        </article>
+        <article>
+          <h3>Where the method stands today</h3>
+          <p>The reference ranges are simplified and have not yet been reviewed by an independent nutritionist. The app's About screen always shows the current review status.</p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DATA ===================== -->
+  <section class="section" id="data">
+    <div class="wrap">
+      <div class="section-head wide">
+        <h2>Where the data comes from.</h2>
+        <p class="body-lg">More than a million products sold in Canada, the USA and India. Each product page names its source and the date its data was last updated.</p>
+      </div>
+      <ul class="ledger">
+        <li>
+          <div class="ledger-head"><svg aria-hidden="true"><use href="#i-database"/></svg><h3>Open databases</h3></div>
+          <div class="ledger-body"><p><a href="https://world.openfoodfacts.org" rel="noopener" target="_blank">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" rel="noopener" target="_blank">Open Beauty Facts</a>, two public product databases available under the Open Database License. They supply most of the catalogue.</p></div>
+        </li>
+        <li>
+          <div class="ledger-head"><svg aria-hidden="true"><use href="#i-camera-plus"/></svg><h3>Community submissions</h3></div>
+          <div class="ledger-body"><p>People add missing products by photographing the pack and typing the label. <b>Nothing is shown to anyone else until a reviewer has compared the typed values with the photos.</b> These records are marked "Community-submitted".</p></div>
+        </li>
+        <li>
+          <div class="ledger-head"><svg aria-hidden="true"><use href="#i-tag"/></svg><h3>Brand submissions</h3></div>
+          <div class="ledger-body"><p>Brands can send their own label data. It is checked the same way and marked "Brand-submitted". Neither kind of submission is presented as an independent audit. <a href="{{root}}business/#brands">How brands send data</a>.</p></div>
+        </li>
+        <li>
+          <div class="ledger-head"><svg aria-hidden="true"><use href="#i-flag"/></svg><h3>Corrections</h3></div>
+          <div class="ledger-body"><p>Anyone can use "Report a problem" on a product page. A reviewer looks at each report, and every change is logged so it can be undone.</p></div>
+        </li>
+      </ul>
+      <p class="notice" style="margin-top:32px"><b>Not medical advice.</b> SafePick reads what's printed on a pack and turns it into a score and plain notes. It never replaces the label or advice from your doctor, dietitian, pharmacist or dermatologist, especially for allergies, diabetes, pregnancy, children and skin conditions.</p>
+    </div>
+  </section>
+<!--/tabs-->
